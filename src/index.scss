@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: #121212;
+    color: #fafafa;    
+    font-family: "roboto", sans-serif;
+
+    @media screen and (min-width:768px) {
+        font-size: 18px;
+    }
+}
+
+h1, h2, h3, h4{
+    font-weight: 400;
+}

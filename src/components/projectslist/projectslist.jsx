@@ -1,0 +1,58 @@
+import './projectslist.scss';
+import ProjectCard from '../project-card/project-card';
+
+export default function ProjectsList({projects, selectedCategories, setSelectedCategories}) {
+
+    const selectedProjects = projects.filter(project =>
+        project.tags.includes(selectedCategories)
+    );
+
+    const categories = [
+        "Développement Front-End",
+        "React",
+        "Responsive design",
+        "Animations & interactions",
+        "Performance web & SEO"
+    ]
+
+    return(
+        <section className='projects-list'>
+            <div className='projects-list__wrapper'>
+                <div className='projects-list__content'>
+                    <h2>Projects</h2>
+                </div>
+                <div className='projects-list__categories'>
+                    <button 
+                        className={`projects-list__categories-button ${selectedCategories === "Tous" ? "projects-list__categories-button--active" : ""}`} onClick={() => setSelectedCategories("Tous")}>
+                        Tous les projets
+                    </button>
+                    {categories.map((cat, index) => (
+                        <button className={`projects-list__categories-button ${selectedCategories === cat ? "projects-list__categories-button--active" : ""}`} key={cat + index} value={cat} onClick={(e) => setSelectedCategories(e.target.value)}>
+                            {cat}
+                        </button>
+                    ))}
+                </div>
+                <div className='projects-list__wrapper-line'></div>
+            </div>
+            <div className='projects-list__gallery'>
+                {selectedCategories === "Tous" ? 
+                    projects.map((project, index) => (
+                        <div key={project.id + index} className='projects-list__gallery-wrapper'>
+                            <ProjectCard
+                                project={project}                                
+                            />
+                        </div>
+                    ))
+                    :
+                    selectedProjects.map((project, index) => (
+                        <div key={project.id + index} className='projects-list__gallery-wrapper'>
+                            <ProjectCard
+                                project={project}                                
+                            />
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+    )
+}

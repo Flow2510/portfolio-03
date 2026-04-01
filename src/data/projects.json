@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Portfolio 03",
+    "id": "portfolio-03",
+    "year": "2026",
+    "color": "#bcd7ff",
+    "link": "https://github.com/Flow2510/",
+    "tags": ["Animations & interactions", "React", "Responsive design"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/mockup-test.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Portfolio développé pour présenter mes projets récents avec une interface plus moderne et des animations plus abouties. Ce projet m’a permis d’améliorer la structure du code, le responsive et l’expérience utilisateur."
+  },
+  {
+    "name": "Porvenir",
+    "id": "porvenir",
+    "link": "https://aubergedelporvenir.netlify.app/",
+    "year": "2026",
+    "color": "#348d52",
+    "tags": ["Responsive design", "Performance web & SEO", "Développement Front-End"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/porvenir-mockup.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Site vitrine multi-langues pour une auberge située en Colombie, entre nature et proximité de la ville. J’ai conçu un site clair et immersif, pensé pour présenter le lieu, améliorer la visibilité de l’auberge et faciliter la réservation via ses partenaires."
+  },
+  {
+    "name": "Portfolio 02",
+    "id": "portfolio-02",
+    "year": "2026",
+    "color": "#bcd7ff",
+    "link": "https://github.com/Flow2510/",
+    "tags": ["Animations & interactions", "React", "Responsive design"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/portfolio02-mockup.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Portfolio développé pour présenter mes projets récents avec une interface plus moderne et des animations plus abouties. Ce projet m’a permis d’améliorer la structure du code, le responsive et l’expérience utilisateur."
+  },
+  {
+    "name": "Spylt Clone",
+    "id": "spylt",
+    "year": "2026",
+    "link": "https://github.com/Flow2510/spylt-clone",
+    "color": "#e0c488",
+    "tags": ["Développement Front-End", "React", "Responsive design", "Animations & interactions"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/spylt-mockup.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Reproduction du site de Splyt dans le cadre d’un projet personnel. L’objectif était de recréer fidèlement le design et les animations tout en travaillant la structure du code, le responsive et les performances."
+  },
+  {
+    "name": "Valles'pok",
+    "id": "vallespok",
+    "year": "2026",
+    "color": "#bd3e3e",
+    "link": "https://github.com/Flow2510/vallespok",
+    "tags": ["Responsive design", "Performance web & SEO", "Développement Front-End"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/vallespok-mockup.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Réalisation du site web d’une association de poker afin de présenter l’association, ses événements et ses informations principales. L’objectif était de créer un site clair, moderne et accessible pour les membres et les nouveaux joueurs."
+  },
+  {
+    "name": "Portfolio",
+    "id": "portfolio-01",
+    "year": "2025",
+    "link": "https://flowportfolio.netlify.app/",
+    "color": "#bda8a8",
+    "tags": ["Animations & interactions", "React", "Responsive design"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/portfolio-mockup.jpeg",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Création de mon premier portfolio afin de présenter mes premiers projets et apprendre à structurer un site web complet. Ce projet m’a permis de travailler le responsive, la mise en page et l’organisation du code."
+  },
+  {
+    "name": "Weather App",
+    "id": "weather-app",
+    "year": "2025",
+    "link": "https://weathernowflow2510.netlify.app/",
+    "color": "#4750ca",
+    "tags": ["React", "Développement Front-End"],
+    "stack": ["REACT", "SCSS"],
+    "image": "/src/assets/images/weather-mockup.png",
+    "gallery": [
+      "/src/assets/images/all-test.jpg",
+      "/src/assets/images/desktop-test.jpg",
+      "/src/assets/images/mobile-test.jpg",
+      "/src/assets/images/mockup-test.png"
+    ],
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
+    "text2": "Réalisation d’une application météo dans le cadre d’un challenge Frontend Mentor. Le projet consistait à créer une interface responsive permettant d’afficher les données météo d’une ville de manière claire et intuitive."
+  }
+]

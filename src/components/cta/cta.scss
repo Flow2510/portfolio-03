@@ -1,0 +1,62 @@
+.cta{
+    padding: 1rem;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        max-width: 750px;
+
+        &-title{
+            font-size: 3rem;
+        }
+
+        &-text{
+            line-height: 200%;
+        }
+
+        &-link{
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            width: fit-content;
+            padding: 0.2rem 0.4rem;
+
+            &--left{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                border-top: 1px solid white;
+                border-left: 1px solid white;
+                border-bottom: 1px solid white;
+                width: 10px;
+                display: none;
+            }
+
+            &--right{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                border-top: 1px solid white;
+                border-right: 1px solid white;
+                border-bottom: 1px solid white;
+                width: 10px;
+                display: none;
+            }
+
+            &:hover{
+                .cta__content-link--left, .cta__content-link--right{
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.hero{
+    height: 100vh;
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+
+    @media screen and (min-width:768px) {
+        justify-content: end;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 800px;
+        padding-top: 1rem;
+
+        &-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        @media screen and (min-width:768px){
+            text-align: left;
+            padding-right: 4rem;
+        }
+
+        &-title{
+            font-size: 2.5rem;
+        }
+
+        &-text{
+            line-height: 200%;
+            font-weight: 400;
+        }
+
+        &-link{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
