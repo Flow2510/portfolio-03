@@ -57,6 +57,5 @@ Créer une interface moderne et minimaliste
 🚀 Installation du projet:
 
 git clone https://github.com/Flow2510/portfolio-03
-cd ton-repo
 yarn install
 yarn dev

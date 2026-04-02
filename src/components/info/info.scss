@@ -7,15 +7,28 @@
     &__wrapper{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         width: 100%;
     }
 
     &__content{
         padding: 0 1rem;
+
+        @media screen and (min-width:768px){
+            padding: 0 3rem;
+        }
+
+        &-title{
+            font-size: 2rem;
+        }
     }
 
     &__list{
+        font-size: 1.5rem;
+
+        @media screen and (min-width:768px) {
+            font-size: 1.5rem;
+        }
 
         & .info__item:last-child{
             border-bottom: 1px solid;
@@ -27,6 +40,10 @@
         padding: 1.5rem 1rem;
         transition: color 0.4s ease-in-out;
         border-top: 1px solid;
+
+        @media screen and (min-width:768px){
+            padding: 1.5rem 3rem;
+        }
 
         &:hover{
             color: #121212;
@@ -52,8 +69,12 @@
         }
 
         &-id{
-            width: 40px;
+            width: 50px;
             text-transform: capitalize;
+
+            @media screen and (min-width:768px){
+                width: 90px;
+            }
         }
     }
 }

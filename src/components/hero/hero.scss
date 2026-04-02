@@ -3,6 +3,7 @@
     display: flex;
     padding: 0 1rem;
     align-items: center;
+    position: relative;
 
     @media screen and (min-width:768px) {
         justify-content: end;
@@ -33,6 +34,54 @@
         &-text{
             line-height: 200%;
             font-weight: 400;
+        }
+
+        &-link{
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+
+            &--hover{
+                display: block;
+                width: 5px;
+            }
+
+            &:hover{
+                transform: translateX(5px);
+
+                .hero__content-link--hover{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        justify-content: space-between;
+        padding: 1rem;
+
+        &-border{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            background: #ffffff;
+            z-index: 100;
+        }
+
+        @media screen and (min-width:768px) {
+            display: flex;
+        }
+
+        &-social{
+            display: flex;
+            gap: 1rem;
         }
 
         &-link{

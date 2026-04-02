@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import ProjectCard from '../project-card/project-card';
 import './gallery.scss';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { div } from 'motion/react-client';
 
 export default function Gallery({ projects }) {
     const [itemWidth, setItemWidth] = useState(window.innerWidth);
@@ -21,7 +20,7 @@ export default function Gallery({ projects }) {
     }, []);
    
     const items = projects.length;
-    const gaps = 32; // ton espacement entre items
+    const gaps = 21; // ton espacement entre items
     const itemWidthWithGap = itemWidth + gaps;
     const totalDistance = isDesktop? 
             itemWidthWithGap * (items - 1)

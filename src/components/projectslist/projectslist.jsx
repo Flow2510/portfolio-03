@@ -1,5 +1,7 @@
 import './projectslist.scss';
 import ProjectCard from '../project-card/project-card';
+import { motion } from 'motion/react';
+import FadeInText from '../fadeintext/fadeintext';
 
 export default function ProjectsList({projects, selectedCategories, setSelectedCategories}) {
 
@@ -19,9 +21,16 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
         <section className='projects-list'>
             <div className='projects-list__wrapper'>
                 <div className='projects-list__content'>
-                    <h2>Projects</h2>
+                    <h2>
+                        <FadeInText text={"Projets:"}/>
+                    </h2>
                 </div>
-                <div className='projects-list__categories'>
+                <motion.div 
+                    className='projects-list__categories'
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}   
+                >
                     <button 
                         className={`projects-list__categories-button ${selectedCategories === "Tous" ? "projects-list__categories-button--active" : ""}`} onClick={() => setSelectedCategories("Tous")}>
                         Tous les projets
@@ -31,17 +40,28 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                             {cat}
                         </button>
                     ))}
-                </div>
-                <div className='projects-list__wrapper-line'></div>
+                </motion.div>
+                <motion.div 
+                    className='projects-list__wrapper-line'
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}   
+                ></motion.div>
             </div>
             <div className='projects-list__gallery'>
                 {selectedCategories === "Tous" ? 
                     projects.map((project, index) => (
-                        <div key={project.id + index} className='projects-list__gallery-wrapper'>
+                        <motion.div 
+                            key={project.id + index} 
+                            className='projects-list__gallery-wrapper'
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}   
+                        >
                             <ProjectCard
                                 project={project}                                
                             />
-                        </div>
+                        </motion.div>
                     ))
                     :
                     selectedProjects.map((project, index) => (

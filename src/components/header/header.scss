@@ -10,9 +10,21 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    border-bottom: 1px solid;
     z-index: 100;
     background: #121212;
+
+    @media screen and (min-width: 768px){
+        padding: 1rem 3rem;
+    }
+
+    &__border{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        background: #fafafa;
+    }
 
     &__logo{
         color: inherit;
@@ -35,6 +47,20 @@
         &-link{
             color: #fafafa;
             text-decoration: none;
+            display: flex;
+            width: 65px;
+            justify-content: center;
+
+            &--hover{
+                display: none;
+            }
+
+            &:hover{
+
+                .header__menu-link--hover{
+                    display: block;
+                }
+            }
         }
     }
 
