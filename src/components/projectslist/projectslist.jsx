@@ -26,6 +26,12 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                     </h2>
                 </div>
                 <motion.div 
+                    className='projects-list__wrapper-line projects-list__wrapper-line--top'
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}   
+                ></motion.div>
+                <motion.div 
                     className='projects-list__categories'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +48,7 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                     ))}
                 </motion.div>
                 <motion.div 
-                    className='projects-list__wrapper-line'
+                    className='projects-list__wrapper-line projects-list__wrapper-line--bottom'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}   

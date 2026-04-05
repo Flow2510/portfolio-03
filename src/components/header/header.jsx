@@ -39,7 +39,8 @@ export default function Header() {
                     className='header__border'
                     initial={{ width: 0 }}
                     animate={{width: "100%" }}
-                    transition={{ duration: 1.2}}
+                    transition={{ duration: 1.2 }}
+                    viewport={{ once: true }}
                 >
                 </motion.div>
             </header>

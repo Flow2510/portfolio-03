@@ -8,19 +8,19 @@ export default function Gallery({ projects }) {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
     useEffect(() => {
-    const handleResize = () => {
-        setItemWidth(window.innerWidth);
-        setIsDesktop(window.innerWidth >= 768);
-    };
+        console.log(itemWidth);
+    }, [itemWidth])
 
-    handleResize();
+    const itemRef = useRef(null);
 
-    window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+    useEffect(() => {
+    if (itemRef.current) {
+        setItemWidth(itemRef.current.offsetWidth);
+    }
     }, []);
    
     const items = projects.length;
-    const gaps = 21; // ton espacement entre items
+    const gaps = 36; // ton espacement entre items
     const itemWidthWithGap = itemWidth + gaps;
     const totalDistance = isDesktop? 
             itemWidthWithGap * (items - 1)
@@ -35,11 +35,11 @@ export default function Gallery({ projects }) {
     const x = useTransform(scrollYProgress, [0, 1], [0, isDesktop ? -totalDistance : 0]);
 
     return(
-        <section className='gallery' ref={scrollRef}>
+        <section className='gallery' id='gallery' ref={scrollRef}>
             <div className='gallery__sticky'>
-                <motion.div className='gallery__wrapper' style={{ x }}>
+                <motion.div className='gallery__wrapper'  style={{ x }}>
                     {projects.map((project, index) => (
-                        <div key={project.id + index} className='gallery__wrapper-container'>
+                        <div key={project.id + index} ref={itemRef} className='gallery__wrapper-container'>
                             <ProjectCard
                                 project={project}
                             />

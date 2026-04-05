@@ -6,7 +6,7 @@
 
     @media screen and (min-width:768px) {
         padding: 0;
-        height: 600vh;
+        height: 700vh;
     }
 
     &__sticky{
@@ -38,7 +38,7 @@
 
             @media screen and (min-width:768px) {
                 height: 100vh;
-                flex: 0 0 100%;
+                flex: 0 0 100vw;
             }
         }
     }

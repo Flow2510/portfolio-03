@@ -5,6 +5,7 @@ import FeatureSection from "../components/featuresection/featuresection";
 import Info from "../components/info/info";
 
 export default function Home({ projects, setSelectedCategories }) {
+
     return(
         <main>
             <Hero />

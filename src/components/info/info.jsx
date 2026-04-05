@@ -1,5 +1,7 @@
+import { motion } from 'motion/react'
 import FadeInText from '../fadeintext/fadeintext'
 import './info.scss'
+
 
 export default function Info() {
     const data = [
@@ -25,10 +27,24 @@ export default function Info() {
                     </h2>
                 </div>
                 <div className='info__list'>
+                    <motion.div 
+                        className='info__border'
+                        initial={{ width: 0 }}
+                        whileInView={{ width: '100%' }}
+                        transition={{ duration: 0.5 }}  
+                        viewport={{ once: true}} 
+                    ></motion.div>
                     {data.map((d, index) => (
                         <div className='info__item' key={d.id + index}>
                             <div className='info__item-overlay'></div>
                             <h3 className='info__item-title'><span className='info__item-id'>[{d.id}]</span> <FadeInText text={d.text}/></h3>
+                            <motion.div 
+                                className='info__item-border'
+                                initial={{ width: 0 }}
+                                whileInView={{ width: '100%' }}
+                                transition={{ duration: 0.5 }}   
+                                viewport={{ once: true}} 
+                            ></motion.div>
                         </div>
                     ))}
                 </div>

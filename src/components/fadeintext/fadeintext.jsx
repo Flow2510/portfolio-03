@@ -7,7 +7,7 @@ export default function FadeInText({ text }) {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.03
+        staggerChildren: 0.04
       }
     }
   };
@@ -22,6 +22,7 @@ export default function FadeInText({ text }) {
       variants={container}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true }}
     >
       {letters.map((char, index) => (
         <motion.span

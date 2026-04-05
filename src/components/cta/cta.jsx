@@ -15,12 +15,14 @@ export default function Cta() {
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolorum, libero magnam placeat alias fuga dolores. Totam doloribus modi officia obcaecati quisquam ad architecto dolorem iure quo delectus, necessitatibus tenetur!</motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
                 >
                     <NavLink to='/' className='cta__content-link'>[<span className='cta__content-link--hover'></span>Link text<span className='cta__content-link--hover'></span>]</NavLink>
                 </motion.div>
