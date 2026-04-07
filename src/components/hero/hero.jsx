@@ -1,18 +1,14 @@
 import './hero.scss';
 import FadeInText from '../fadeintext/fadeintext';
-import { AnimatePresence, motion } from 'motion/react';
-import { useState } from 'react';
-import ModalContact from '../modalcontact/modalcontact';
+import { motion } from 'motion/react';
 
 export default function Hero() {
-    const [modalContactOpen, setModalContactOpen] = useState(false)
-
     return(
         <section className='hero'>
             <div className='hero__content'>
                 <h2 className='hero__content-title'>
                     <FadeInText 
-                        text={"Hero title"}
+                        text={"Front-End Developer Junior React & UI"}
                     />
                 </h2>
                 <div className='hero__content-wrapper'>
@@ -74,12 +70,9 @@ export default function Hero() {
                     >
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <button 
-                        className='hero__footer-link hero__footer-link--mail'
-                        onClick={() => setModalContactOpen(prev => !prev)}
-                    >
+                    <a href="mailto:exemple@exemple.fr" target='__blank' className='hero__footer-link'>
                         <i className="fa-solid fa-envelope"></i>
-                    </button>
+                    </a>
                 </motion.div>
                 <div className='hero__footer-wrapper'>
                     <motion.p
@@ -92,11 +85,6 @@ export default function Hero() {
                     </motion.p>
                 </div>
             </div>
-            <AnimatePresence>
-                {modalContactOpen &&
-                    <ModalContact setModalContactOpen={setModalContactOpen}/>
-                }
-            </AnimatePresence>
         </section>
     )
 }

@@ -4,6 +4,13 @@ import './footer.scss';
 export default function Footer() {
     return(
         <footer className='footer'>
+            <motion.div
+                className='footer__border'
+                initial={{ width: 0 }}
+                whileInView={{width: "100%" }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}>
+            </motion.div>
             <div className='footer__content'>
                 <div className='footer__content-wrapper'>
                     <motion.h2

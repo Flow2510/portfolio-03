@@ -6,7 +6,7 @@ export default function ReturnSection(){
         <section className='return-section'>
             <div className='return-section__overlay'></div>
             <div className='return-section__wrapper'>
-                <NavLink className='return-section__link'>Retour aux Projets</NavLink>
+                <NavLink className='return-section__link' to={'/projects'}>Retour aux Projets</NavLink>
             </div>
         </section>
     )

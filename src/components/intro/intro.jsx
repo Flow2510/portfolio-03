@@ -1,15 +1,50 @@
 import { NavLink } from 'react-router-dom';
 import './intro.scss';
+import FadeInText from '../fadeintext/fadeintext';
+import { motion } from 'motion/react';
 
 export default function Intro({ project }) {
     return(
         <section className='intro'>
             <div className='intro__content'>
-                <NavLink className={'intro__content-link'} to='/projects'>[Retour]</NavLink>
-                <h2 className={'intro__content-title'}>{project.name}</h2>
-                <img className={'intro__content-image'} src={project.image} alt="" />
-                <p className={'intro__content-text'}>{project.text}</p>
-                <p className={'intro__content-text'}>{project.text2}</p>
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
+                >
+                    <NavLink className={'intro__content-link'} to='/projects'>[Retour]</NavLink>
+                </motion.div>
+                <h2 className={'intro__content-title'}>
+                    <FadeInText text={project.name} />
+                </h2>
+                <motion.img 
+                    className={'intro__content-image'} 
+                    src={project.image} 
+                    alt="" 
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
+                />
+                <motion.p 
+                    className={'intro__content-text'}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
+                >
+                    {project.text}
+                </motion.p>
+                <motion.p 
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true}} 
+                    className={'intro__content-text'}
+                >
+                    {project.text2}
+                </motion.p>
             </div>
         </section>
     )

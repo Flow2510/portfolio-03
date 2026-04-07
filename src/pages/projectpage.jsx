@@ -15,8 +15,9 @@ export default function ProjectPage({projects}) {
             <Intro 
                 project={project}
             />
-            <ProjectsGallery project={project}/>
             <ProjectFeatures project={project}/>
+            <ProjectsGallery project={project}/>
+            
             <ReturnSection />
             <Info />
         </main>

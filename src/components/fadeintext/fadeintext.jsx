@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function FadeInText({ text }) {
-  const letters = text.split("");
+  const words = text.split(" ");
 
   const container = {
     hidden: {},
@@ -24,14 +24,24 @@ export default function FadeInText({ text }) {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      {letters.map((char, index) => (
-        <motion.span
-          key={index}
-          variants={letter}
-          style={{ display: "inline-block" }}
+      {words.map((word, i) => (
+        <span
+          key={i}
+          style={{ display: "inline-block", whiteSpace: "nowrap" }}
         >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
+          {word.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letter}
+              style={{ display: "inline-block" }}
+            >
+              {char}
+            </motion.span>
+          ))}
+
+          {/* espace entre les mots */}
+          <span>&nbsp;</span>
+        </span>
       ))}
     </motion.span>
   );

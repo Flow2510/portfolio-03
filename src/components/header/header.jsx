@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './header.scss';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import FadeInText from '../fadeintext/fadeintext';
 
 export default function Header() {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -10,14 +11,11 @@ export default function Header() {
         <div className='header__wrapper'>
             <header className='header'>
                 <NavLink to={'/'} className='header__logo'>
-                    <motion.h1 
+                    <h1 
                         className='header__logo-title'
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}   
                     >
-                        LOGO
-                    </motion.h1>
+                        <FadeInText text={"LOGO"}/>
+                    </h1>
                 </NavLink>
                 <motion.nav 
                     className='header__menu'
