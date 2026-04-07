@@ -14,7 +14,7 @@ export default function Header() {
                     <h1 
                         className='header__logo-title'
                     >
-                        <FadeInText text={"LOGO"}/>
+                        <FadeInText text={"Florian Sendra ©"}/>
                     </h1>
                 </NavLink>
                 <motion.nav 

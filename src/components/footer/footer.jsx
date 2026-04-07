@@ -20,7 +20,7 @@ export default function Footer() {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true}} 
                     >
-                        Footer Title
+                        Florian Sendra
                     </motion.h2>
                     <motion.p
                         className='footer__content-text'
@@ -29,7 +29,7 @@ export default function Footer() {
                         transition={{ duration: 0.5 }}   
                         viewport={{ once: true}} 
                     >
-                        Footer Subtitle
+                        Dev web
                     </motion.p>
                 </div>
                 <motion.p
@@ -39,7 +39,7 @@ export default function Footer() {
                     transition={{ duration: 0.5 }}   
                     viewport={{ once: true}} 
                 >
-                    Footer Subtitle
+                    2026
                 </motion.p>
             </div>
         </footer>

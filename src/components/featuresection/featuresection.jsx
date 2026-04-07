@@ -2,16 +2,49 @@ import { useNavigate } from 'react-router-dom';
 import './featuresection.scss';
 import FadeInText from '../fadeintext/fadeintext';
 import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 
 
 export default function FeatureSection({ setSelectedCategories }) {
     const features = [
-            "Développement Front-End",
-            "React",
-            "Responsive design",
-            "Animations & interactions",
-            "Performance web & SEO"
-    ]
+        {
+            title: "Développement Front-End",
+            image: "/src/assets/images/frontend.jpg"
+        },
+        {
+            title: "React",
+            image: "/src/assets/images/react.jpg"
+        },
+        {
+            title: "Responsive design",
+            image: "/src/assets/images/device.jpg"
+        },
+        {
+            title: "Animations & interactions",
+            image: "/src/assets/images/animation.jpg"
+        },
+        {
+            title: "Performance web & SEO",
+            image: "/src/assets/images/perf.jpg"
+        }
+    ];
+
+    const [pos, setPos] = useState({ x: 0, y: 0 })
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setPos({
+                x: e.clientX,
+                y: e.clientY
+            })
+        }
+
+        globalThis.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+        globalThis.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, [])
 
     const navigate = useNavigate()
 
@@ -35,8 +68,11 @@ export default function FeatureSection({ setSelectedCategories }) {
                 {features.map((feature, index) => (
                     <button className='feature' key={feature + index} value={feature} onClick={() => {setSelectedCategories(feature); navigate('/projects');}}>
                         <div className='feature__overlay'></div>
+                        <div className='feature__cursor' style={{ top: pos.y , left: pos.x}}>
+                            <img className='feature__cursor-image' src={feature.image} alt="" />
+                        </div>
                         <h3 className='feature__title'>
-                            <FadeInText text={feature}/>
+                            <FadeInText text={feature.title}/>
                         </h3>
                         <p className='feature__index'>
                             <FadeInText text={`[00${index + 1}]`} />

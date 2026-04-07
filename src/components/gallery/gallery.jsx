@@ -7,10 +7,6 @@ export default function Gallery({ projects }) {
     const [itemWidth, setItemWidth] = useState(window.innerWidth);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
-    useEffect(() => {
-        console.log(itemWidth);
-    }, [itemWidth])
-
     const itemRef = useRef(null);
 
     useEffect(() => {

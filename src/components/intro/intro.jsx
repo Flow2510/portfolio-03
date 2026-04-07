@@ -11,22 +11,26 @@ export default function Intro({ project }) {
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    viewport={{ once: true}} 
+                    viewport={{ once: true, amount: 0.3}} 
                 >
                     <NavLink className={'intro__content-link'} to='/projects'>[Retour]</NavLink>
                 </motion.div>
                 <h2 className={'intro__content-title'}>
                     <FadeInText text={project.name} />
                 </h2>
-                <motion.img 
-                    className={'intro__content-image'} 
-                    src={project.image} 
-                    alt="" 
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true}} 
-                />
+                <div
+                     className={'intro__content-wrapper'}
+                >
+                    <motion.img 
+                        className={'intro__content-image'} 
+                        src={project.image} 
+                        alt="" 
+                        initial={{ y: "100%" }}
+                        whileInView={{ y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true}} 
+                    />
+                </div>
                 <motion.p 
                     className={'intro__content-text'}
                     initial={{ opacity: 0, y: 15 }}

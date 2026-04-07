@@ -6,15 +6,20 @@ export default function ProjectsGallery({ project }) {
         <section className='projects-gallery'>
             <div className='projects-gallery__wrapper'>
                 {project.gallery.map((i, index) => (
-                    <motion.img 
+                    <div
                         key={i + index} 
-                        src={i} alt="" 
-                        className={`projects-gallery__wrapper-image projects-gallery__wrapper-image--${index + 1}`}
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true}} 
-                    />
+                        className={`projects-gallery__container projects-gallery__container--${index + 1}`}
+                    >
+                        <motion.img                                 
+                            src={i} 
+                            alt="" 
+                            className={`projects-gallery__wrapper-image`}
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                        />
+                    </div>
                 ))}
             </div>
         </section>

@@ -60,13 +60,19 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                         <motion.div 
                             key={project.id + index} 
                             className='projects-list__gallery-wrapper'
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}   
+                            style={{ overflow: "hidden" }}
                         >
-                            <ProjectCard
-                                project={project}                                
-                            />
+                            <motion.div 
+                                style={{ height: "100%" }}
+                                initial={{ y: "100%" }}
+                                whileInView={{ y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true, }}
+                            >
+                                <ProjectCard
+                                    project={project}                                
+                                />
+                            </motion.div>
                         </motion.div>
                     ))
                     :

@@ -7,16 +7,11 @@ import Header from './components/header/header'
 
 import projects from './data/projects.json'
 import Footer from './components/footer/footer'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ProjectPage from './pages/projectpage'
 
 function App() {
   const [selectedCategories, setSelectedCategories] = useState("Tous")
-
-  
-  useEffect(() => (
-    console.log(selectedCategories)
-  ), [selectedCategories])
 
   return (
       <>

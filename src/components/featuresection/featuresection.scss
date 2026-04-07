@@ -63,6 +63,25 @@
         & .feature__overlay{
             height: 100%;
         }
+
+        & .feature__cursor{
+            display: block;
+        }
+    }
+
+    &__cursor{
+        position: fixed;
+        display: none;
+        height: 180px;
+        width: 250px;
+        z-index: 100;
+        transform: translate(1.5rem, 1.5rem);
+
+        &-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__border{
