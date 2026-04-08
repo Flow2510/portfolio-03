@@ -13,7 +13,7 @@ export default function FadeInText({ text }) {
   };
 
   const letter = {
-    hidden: { opacity: 0, y: 5 },
+    hidden: { opacity: 0, y: 15 },
     visible: { opacity: 1, y: 0 }
   };
 
@@ -27,7 +27,7 @@ export default function FadeInText({ text }) {
       {words.map((word, i) => (
         <span
           key={i}
-          style={{ display: "inline-block", whiteSpace: "nowrap" }}
+          style={{ display: "inline-block", whiteSpace: "nowrap", overflow: "hidden" }}
         >
           {word.split("").map((char, index) => (
             <motion.span

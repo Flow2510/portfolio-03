@@ -8,17 +8,20 @@ export default function Info() {
         {
             text: "sendra.florian@gmail.com",
             id: "e", 
-            link: "mailto:sendra.florian@gmail.com"
+            link: "mailto:sendra.florian@gmail.com",
+            label: "M'envoyer un email (ouvre dans un nouvel onglet)"
         },
         {
             text: "+336 21 15 67 13",
             id: "m",
-            link: "https://wa.me/1XXXXXXXXXX"
+            link: "https://wa.me/0621156713",
+            label: "Me contacter sur Whats'APP (ouvre dans un nouvel onglet)"
         },
         {
             text: "Perpignan, France",
             id: "l",
-            link: "https://maps.app.goo.gl/48nhJjkEDVk739679"
+            link: "https://maps.app.goo.gl/48nhJjkEDVk739679",
+            label: "Ouver Google Map sur ma localisation (ouvre dans un nouvel onglet)"
         }
     ]
     return(
@@ -38,7 +41,14 @@ export default function Info() {
                         viewport={{ once: true}} 
                     ></motion.div>
                     {data.map((d, index) => (
-                        <a className='info__item' key={d.id + index} href={d.link} target='__blank'>
+                        <a 
+                            className='info__item' 
+                            key={d.id + index} 
+                            href={d.link} 
+                            target='__blank' 
+                            rel="noopener noreferrer"
+                            aria-label={d.label}
+                        >
                             <div className='info__item-overlay'></div>
                             <h3 className='info__item-title'><span className='info__item-id'>[{d.id}]</span> <FadeInText text={d.text}/></h3>
                             <motion.div 

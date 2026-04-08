@@ -60,6 +60,8 @@ export default function Hero() {
                         href='https://github.com/Flow2510' 
                         target='_blank' 
                         className='hero__footer-link'
+                        rel="noopener noreferrer"
+                        aria-label='Voir mon profil GitHub (ouvre dans un nouvel onglet)'
                     >
                         <i className="fa-brands fa-square-github"></i>
                     </a>
@@ -67,10 +69,18 @@ export default function Hero() {
                         className='hero__footer-link'
                         href='https://www.linkedin.com/in/florian-sendra-3270961a1/' 
                         target='_blank' 
+                        rel="noopener noreferrer"
+                        aria-label='Voir mon profil LinkedIn (ouvre dans un nouvel onglet)'
                     >
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="mailto:exemple@exemple.fr" target='__blank' className='hero__footer-link'>
+                    <a 
+                        href="mailto:exemple@exemple.fr" 
+                        target='__blank' 
+                        rel="noopener noreferrer"
+                        className='hero__footer-link'
+                        aria-label='M’envoyer un email (ouvre dans un nouvel onglet)'
+                    >
                         <i className="fa-solid fa-envelope"></i>
                     </a>
                 </motion.div>

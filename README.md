@@ -12,6 +12,7 @@ La police finale n’est pas encore choisie
 Le logo n’est pas encore créé
 Certaines parties du design peuvent encore évoluer
 Les animations ne sont pas définitives
+Amélioration des performances
 
 
 ⚙️ Stack utilisée:
