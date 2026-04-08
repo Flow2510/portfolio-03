@@ -6,19 +6,19 @@ import './info.scss'
 export default function Info() {
     const data = [
         {
-            text: "email@exemple.fr",
+            text: "sendra.florian@gmail.com",
             id: "e", 
-            link: "mailto:exemple@exemple.fr"
+            link: "mailto:sendra.florian@gmail.com"
         },
         {
-            text: "+336 66 66 66 66",
+            text: "+336 21 15 67 13",
             id: "m",
             link: "https://wa.me/1XXXXXXXXXX"
         },
         {
             text: "Perpignan, France",
             id: "l",
-            link: "https://maps.google.fr"
+            link: "https://maps.app.goo.gl/48nhJjkEDVk739679"
         }
     ]
     return(

@@ -9,23 +9,28 @@ export default function FeatureSection({ setSelectedCategories }) {
     const features = [
         {
             title: "Développement Front-End",
-            image: "/src/assets/images/frontend.jpg"
+            image: "/src/assets/images/frontend.webp",
+            alt: "Ecran d'ordinateur avec ligne de code dans un éditeur de texte"
         },
         {
             title: "React",
-            image: "/src/assets/images/react.jpg"
+            image: "/src/assets/images/react.webp",
+            alt: "Logo stylisé de REACT"
         },
         {
             title: "Responsive design",
-            image: "/src/assets/images/device.jpg"
+            image: "/src/assets/images/device.webp",
+            alt: "Illustration d'un interface sur mobile, tablette et grand écran"
         },
         {
             title: "Animations & interactions",
-            image: "/src/assets/images/animation.jpg"
+            image: "/src/assets/images/animation.webp",
+            alt: "Illustration d'un design UX"
         },
         {
             title: "Performance web & SEO",
-            image: "/src/assets/images/perf.jpg"
+            image: "/src/assets/images/perf.webp",
+            alt: "Illustration d'un écran d'ordinateur avec un compteur de performance"
         }
     ];
 
@@ -66,7 +71,7 @@ export default function FeatureSection({ setSelectedCategories }) {
                     viewport={{ once: true}}
                 ></motion.div>
                 {features.map((feature, index) => (
-                    <button className='feature' key={feature + index} value={feature} onClick={() => {setSelectedCategories(feature); navigate('/projects');}}>
+                    <button className='feature' key={feature + index} value={feature.title} onClick={() => {setSelectedCategories(feature.title); navigate('/projects');}}>
                         <div className='feature__overlay'></div>
                         <div className='feature__cursor' style={{ top: pos.y , left: pos.x}}>
                             <img className='feature__cursor-image' src={feature.image} alt="" />

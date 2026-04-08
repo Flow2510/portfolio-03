@@ -8,7 +8,7 @@ export default function Hero() {
             <div className='hero__content'>
                 <h2 className='hero__content-title'>
                     <FadeInText 
-                        text={"Front-End Developer Junior React & UI"}
+                        text={"Développeur Front-End Junior React & UI"}
                     />
                 </h2>
                 <div className='hero__content-wrapper'>
@@ -17,9 +17,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        viewport={{ once: true}} 
+                        viewport={{ once: true}}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt enim vero dolorem debitis ratione adipisci dolorum modi quis ducimus autem? Et minus consequuntur tenetur, impedit modi commodi veritatis magnam omnis.
+                        Développeur Front-End Junior, je crée des interfaces réactives, minimalistes et ergonomiques. Mon objectif est de construire des expériences web fluides et accessibles, adaptées à tous les supports.
                     </motion.p>
                     <motion.p 
                         className='hero__content-text'
@@ -28,7 +28,7 @@ export default function Hero() {
                         transition={{ duration: 0.5 }}    
                         viewport={{ once: true}} 
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt enim vero dolorem debitis ratione adipisci dolorum modi quis ducimus autem? Et minus consequuntur tenetur, impedit modi commodi veritatis magnam omnis.
+                        Je combine React, SCSS et animations légères pour donner vie aux interfaces. Chaque projet est pour moi l’occasion de tester de nouvelles idées et d’allier performance et esthétique.
                     </motion.p>
                 </div>
                 <motion.div
@@ -37,7 +37,7 @@ export default function Hero() {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
                 >
-                    <a className='hero__content-link' href='#gallery'>[<span className='hero__content-link--hover'></span>Scroll or click to discover<span className='hero__content-link--hover'></span>]</a>
+                    <a className='hero__content-link' href='#gallery'>[<span className='hero__content-link--hover'></span>Explorez le portfolio<span className='hero__content-link--hover'></span>]</a>
                 </motion.div> 
             </div>
             <div className='hero__footer'>

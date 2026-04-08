@@ -47,6 +47,7 @@
         padding: 1.5rem;
         background: #12121296;
         backdrop-filter: blur(10px);
+        height: 165px;
 
         @media screen and (min-width:768px){
             gap: 1rem;
@@ -56,7 +57,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            max-width: 1000px;
+            max-width: 400px;
         }
     }
 }

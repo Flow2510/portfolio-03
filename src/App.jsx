@@ -9,6 +9,7 @@ import projects from './data/projects.json'
 import Footer from './components/footer/footer'
 import { useState } from 'react'
 import ProjectPage from './pages/projectpage'
+import ScrollToTop from './components/scrolltotop/scrolltotop'
 
 function App() {
   const [selectedCategories, setSelectedCategories] = useState("Tous")
@@ -16,6 +17,7 @@ function App() {
   return (
       <>
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route 
             path='/' 

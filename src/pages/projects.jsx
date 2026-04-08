@@ -1,3 +1,4 @@
+import Info from "../components/info/info";
 import ProjectsList from "../components/projectslist/projectslist";
 
 export default function Projects({ projects, setSelectedCategories, selectedCategories }) {
@@ -8,6 +9,7 @@ export default function Projects({ projects, setSelectedCategories, selectedCate
                 selectedCategories={selectedCategories}
                 setSelectedCategories={setSelectedCategories}
             />
+            <Info />
         </main>
     )
 }

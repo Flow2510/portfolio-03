@@ -6,10 +6,12 @@
     position: relative;
     background: #fafafa;
     color: #121212;
+    flex: 1;
 
     @media screen and (min-width:768px){
         flex-direction: row;
         gap: 2rem;
+        padding: 6rem 3rem 2rem;
     }
 
     &__wrapper{
@@ -50,10 +52,6 @@
         display: flex;
         gap: 0.8rem;
 
-        @media screen and (min-width:768px){
-            width: 200px;
-        }
-
         &-button{
             background: none;
             border: none;
@@ -69,6 +67,8 @@
 
             &--active{
                 color: #121212;
+                font-weight: 400;
+                font-family: "roboto", sans-serif;
             }
         }
     }

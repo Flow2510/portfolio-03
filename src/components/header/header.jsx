@@ -25,7 +25,7 @@ export default function Header() {
                 >
                     <NavLink className='header__menu-link' to={'/'}><span className='header__menu-link--hover'>[</span>Accueil<span className='header__menu-link--hover'>]</span></NavLink>
                     <NavLink className='header__menu-link' to={'/projects'}><span className='header__menu-link--hover'>[</span>Projets<span className='header__menu-link--hover'>]</span></NavLink>
-                    <NavLink className='header__menu-link' to={'/about'}><span className='header__menu-link--hover'>[</span>About<span className='header__menu-link--hover'>]</span></NavLink>
+                    <NavLink className='header__menu-link' to={'/about'}><span className='header__menu-link--hover'>[</span>À propos<span className='header__menu-link--hover'>]</span></NavLink>
                 </motion.nav>
                 <button 
                     onClick={() => setMenuIsOpen(prev => !prev)}
@@ -46,7 +46,7 @@ export default function Header() {
                 <nav className='mobile-header__menu'>
                     <NavLink className='mobile-header__menu-link' to={'/'} onClick={() => menuIsOpen(prev => !prev)}>Accueil</NavLink>
                     <NavLink className='mobile-header__menu-link' to={'/projects'} onClick={() => menuIsOpen(prev => !prev)}>Projets</NavLink>
-                    <NavLink className='mobile-header__menu-link' to={'/about'} onClick={() => menuIsOpen(prev => !prev)}>About</NavLink>
+                    <NavLink className='mobile-header__menu-link' to={'/about'} onClick={() => menuIsOpen(prev => !prev)}>À propos</NavLink>
                 </nav>
             </div>
             

@@ -28,7 +28,7 @@ export default function Intro({ project }) {
                         initial={{ y: "100%" }}
                         whileInView={{ y: 0 }}
                         transition={{ duration: 0.5 }}
-                        viewport={{ once: true}} 
+                        viewport={{ once: true, amount: 0, margin: "50px" }} 
                     />
                 </div>
                 <motion.p 

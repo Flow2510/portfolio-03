@@ -6,16 +6,12 @@
     "link": "https://github.com/Flow2510/",
     "tags": ["Animations & interactions", "React", "Responsive design"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/mockup-test.png",
+    "library": ["Vite", "React-Router", "Motion", "JSON"],
+    "image": "/src/assets/images/portfolio3-mobile-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #3 affichant la page d’accueil sur un ordinateur portable",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Portfolio développé pour présenter mes projets récents avec une interface plus moderne et des animations plus abouties. Ce projet m’a permis d’améliorer la structure du code, le responsive et l’expérience utilisateur."
+    "intro": "Portfolio moderne avec animations et interface réactive.",
+    "text": "Ce projet présente mes travaux récents en front-end, avec une interface minimaliste et des animations subtiles. L'objectif était de rendre la navigation intuitive et agréable sur tous les appareils.",
+    "text2": "J'ai particulièrement travaillé la structure du code et le responsive design, tout en améliorant l'expérience utilisateur grâce à des transitions et micro-interactions cohérentes."
   },
   {
     "name": "Porvenir",
@@ -24,34 +20,25 @@
     "year": "2026",
     "tags": ["Responsive design", "Performance web & SEO", "Développement Front-End"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/porvenir-mockup.png",
+    "library": ["Vite", "React-Router", "I18n", "Motion"],
+    "image": "/src/assets/images/porvenir-mockup.webp",
     "alt": "Mockup du site Porvenir affichant la page d’accueil sur un smartphone",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Site vitrine multi-langues pour une auberge située en Colombie, entre nature et proximité de la ville. J’ai conçu un site clair et immersif, pensé pour présenter le lieu, améliorer la visibilité de l’auberge et faciliter la réservation via ses partenaires."
+    "intro": "Site vitrine responsive pour une auberge avec présentation immersive.",
+    "text": "Le site permet de découvrir l'auberge et ses services tout en naviguant facilement sur mobile et desktop. J'ai porté une attention particulière à la clarté et à l'esthétique des pages.",
+    "text2": "Ce projet m’a permis de mettre en pratique mes compétences en responsive design et SEO, tout en améliorant la performance globale et la lisibilité du contenu."
   },
   {
     "name": "Portfolio 02",
     "id": "portfolio-02",
     "year": "2026",
-    "link": "https://github.com/Flow2510/",
     "tags": ["Animations & interactions", "React", "Responsive design"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/portfolio02-mockup.png",
+    "library": ["Vite", "React-Router", "Motion", "JSON"],
+    "image": "/src/assets/images/portfolio02-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #2 affichant la page d’accueil sur une tablette",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Portfolio développé pour présenter mes projets récents avec une interface plus moderne et des animations plus abouties. Ce projet m’a permis d’améliorer la structure du code, le responsive et l’expérience utilisateur."
+    "intro": "Portfolio avec interface moderne et animations interactives.",
+    "text": "Ce projet présente mes compétences en React et en animations pour rendre l'interface vivante et intuitive. Le design minimaliste met en avant le contenu sans surcharge visuelle.",
+    "text2": "J'ai travaillé sur la structure du code et le responsive pour offrir une expérience fluide sur tous les appareils, en intégrant des transitions et micro-interactions."
   },
   {
     "name": "Spylt Clone",
@@ -60,16 +47,12 @@
     "link": "https://github.com/Flow2510/spylt-clone",
     "tags": ["Développement Front-End", "React", "Responsive design", "Animations & interactions"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/spylt-mockup.png",
+    "library": ["Vite", "Motion", "GSAP", "JSON"],
+    "image": "/src/assets/images/spylt-mockup.webp",
     "alt": "Mockup du clone du site Spylt affichant la page d’accueil sur un ordinateur portable",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Reproduction du site de Splyt dans le cadre d’un projet personnel. L’objectif était de recréer fidèlement le design et les animations tout en travaillant la structure du code, le responsive et les performances."
+    "intro": "Reproduction du site Spylt avec animations et responsive design.",
+    "text": "Le projet consistait à recréer fidèlement l'interface et les animations du site original. J'ai veillé à ce que toutes les sections restent responsives et cohérentes sur différents écrans.",
+    "text2": "Cette réalisation m’a permis de pratiquer la duplication précise de design et d'interactions, tout en consolidant mes compétences en React et SCSS."
   },
   {
     "name": "Valles'pok",
@@ -78,16 +61,12 @@
     "link": "https://github.com/Flow2510/vallespok",
     "tags": ["Responsive design", "Performance web & SEO", "Développement Front-End"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/vallespok-mockup.png",
+    "library": ["Vite", "React-Router", "Supabase"],
+    "image": "/src/assets/images/vallespok-mockup.webp",
     "alt": "Mockup du site Valles'pok affichant la page d’accueil sur un smartphone",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Réalisation du site web d’une association de poker afin de présenter l’association, ses événements et ses informations principales. L’objectif était de créer un site clair, moderne et accessible pour les membres et les nouveaux joueurs."
+    "intro": "Site web pour une association de poker, clair et accessible.",
+    "text": "Le projet vise à présenter l’association, ses événements et ses informations clés. J’ai travaillé sur la navigation et le design pour que l’expérience utilisateur soit agréable.",
+    "text2": "J’ai optimisé le site pour le responsive et la performance, en m’assurant que chaque page soit lisible et facile à parcourir sur tous les appareils."
   },
   {
     "name": "Portfolio",
@@ -96,16 +75,12 @@
     "link": "https://flowportfolio.netlify.app/",
     "tags": ["Animations & interactions", "React", "Responsive design"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/portfolio-mockup.jpeg",
+    "library": ["Vite", "React-Router", "Motion", "JSON"],
+    "image": "/src/assets/images/portfolio-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #1 affichant la page d’accueil sur un ordinateur portable",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Création de mon premier portfolio afin de présenter mes premiers projets et apprendre à structurer un site web complet. Ce projet m’a permis de travailler le responsive, la mise en page et l’organisation du code."
+    "intro": "Premier portfolio pour présenter mes projets et compétences front-end.",
+    "text": "Ce projet m’a permis de découvrir l’organisation d’un site complet avec React et SCSS. J’ai expérimenté le responsive et les animations basiques pour améliorer l’expérience utilisateur.",
+    "text2": "Chaque page a été pensée pour être claire et lisible, tout en me permettant d’apprendre à structurer un projet front-end de manière professionnelle."
   },
   {
     "name": "Weather App",
@@ -115,15 +90,11 @@
     "color": "#4750ca",
     "tags": ["React", "Développement Front-End"],
     "stack": ["REACT", "SCSS"],
-    "image": "/src/assets/images/weather-mockup.png",
+    "library": ["Vite", "APIRest"],
+    "image": "/src/assets/images/weather-mockup.webp",
     "alt": "Mockup du defi WeatherApp affichant la page d’accueil sur une tablette",
-    "gallery": [
-      "/src/assets/images/all-test.jpg",
-      "/src/assets/images/desktop-test.jpg",
-      "/src/assets/images/mobile-test.jpg"
-    ],
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi! Itaque nobis, maxime enim corporis rerum eos, maiores, perspiciatis impedit laborum soluta possimus vero fugit qui saepe culpa dolores quo.",
-    "text2": "Réalisation d’une application météo dans le cadre d’un challenge Frontend Mentor. Le projet consistait à créer une interface responsive permettant d’afficher les données météo d’une ville de manière claire et intuitive."
+    "intro": "Application météo responsive et intuitive pour découvrir les prévisions.",
+    "text": "Cette app permet de consulter rapidement les prévisions météo d’une ville avec une interface claire. J’ai travaillé le design pour que les informations soient faciles à lire sur tous les écrans.",
+    "text2": "Le projet m’a permis de mettre en pratique React et SCSS, tout en testant la réactivité et la performance des composants interactifs."
   }
 ]

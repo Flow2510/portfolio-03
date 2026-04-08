@@ -4,15 +4,35 @@ import FadeInText from '../fadeintext/fadeintext';
 import List from '../list/list';
 
 export default function Presentation() {
-    const stud = ["Exemple", "Exemple", "Exemple", "Exemple"];
-    const comp = ["Exemple", "Exemple", "Exemple", "Exemple"];
-    const learn = ["Exemple", "Exemple", "Exemple", "Exemple"];
-    const contact = ["exemple@exemple.com", "+336 00 00 00 00"];
+    const stud = [
+        "'Integrateur Web' OpenClassRooms [2026]", 
+        "'HTML, CSS, JS' W3School [2025]", 
+        "'Responsive Web Designe Certification' FreeCodeCamp [2025]", 
+    ];
+
+    const comp = [
+        "HTML, CSS, JS", 
+        "React", 
+        "SCSS", 
+        "Animations (Framer Motion, GSAP)"
+    ];
+
+    const learn = [
+        "Next.js",
+        "Supabase",
+        "UI / UX Design",
+        "Animations"
+    ];
+
+    const contact = [
+        "sendra.florian@gmail.com", 
+        "+336 21 15 67 13"
+    ];
 
     return(
         <section className='presentation'>
             <h2>
-                <FadeInText text={"Title"}/>
+                <FadeInText text={"À propos de moi"}/>
             </h2>
             <div className='presentation__wrapper'>
                 <div className='presentation__container'>
@@ -25,7 +45,7 @@ export default function Presentation() {
                             whileInView={{ y: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            src="/src/assets/images/silhouette.jpg" 
+                            src="/src/assets/images/silhouette.webp" 
                             alt="" 
                         />
                     </motion.div>
@@ -39,7 +59,7 @@ export default function Presentation() {
                             transition={{ duration: 0.5 }}  
                             viewport={{ once: true }}
                         >
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed dolorem corrupti consequuntur similique velit, quisquam delectus, eveniet sint ad quia pariatur nihil vero, expedita voluptatem neque a dicta. Nemo, maiores?
+                            Je suis un développeur front-end junior, passionné par la création d’interfaces simples et efficaces. Mon objectif est de construire des expériences web intuitives et accessibles.
                         </motion.p>
                         <motion.p 
                             className='presentation__content-text'
@@ -48,7 +68,7 @@ export default function Presentation() {
                             transition={{ duration: 0.5 }}  
                             viewport={{ once: true }}
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consectetur pariatur exercitationem ipsum hic! Ratione, maxime quis? Fuga, cupiditate ex distinctio alias atque explicabo quam sint iusto dolore obcaecati culpa.
+                            Durant ma formation et mes projets, j’ai exploré différentes technologies comme React, SCSS et les animations interactives. J’aime travailler sur des sites responsives qui s’adaptent à tous les supports.
                         </motion.p>
                         <motion.p 
                             className='presentation__content-text'
@@ -57,13 +77,12 @@ export default function Presentation() {
                             transition={{ duration: 0.5 }}  
                             viewport={{ once: true }}
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consectetur pariatur exercitationem ipsum hic! Ratione, maxime quis? Fuga, cupiditate ex distinctio alias atque explicabo quam sint iusto dolore obcaecati culpa.
+                            Je continue à perfectionner mes compétences et à tester de nouvelles idées pour améliorer mes projets. Chaque site que je crée est pour moi une occasion d’allier esthétique et performance.
                         </motion.p>
                     </div>
                     <List title={'Parcours:'} items={stud}/>
                     <List title={'Stack:'} items={comp}/>
-                    <List title={'Projets:'} items={comp}/>
-                    <List title={'Apprentissage:'} items={learn}/>
+                    <List title={'Focus actuel:'} items={learn}/>
                     <div className='presentation__content-wrapper'>
                         <motion.p 
                             className='presentation__content-subtitle'
@@ -82,7 +101,7 @@ export default function Presentation() {
                                 transition={{ duration: 0.5 }}
                                 viewport={{ once: true }}
                             >
-                                <a target='_blank' href="https://www.github.com">github</a>
+                                <a target='_blank' href="https://www.github.com">github <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </motion.li>
                             <motion.li 
                                 className='presentation__list-item'
@@ -91,7 +110,7 @@ export default function Presentation() {
                                 transition={{ duration: 0.5 }}
                                 viewport={{ once: true }}
                             >
-                                <a target='_blank' href="https://www.linkedin.com">linkedin</a>
+                                <a target='_blank' href="https://www.linkedin.com">linkedin <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </motion.li>
                         </ul>
                     </div>

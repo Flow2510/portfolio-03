@@ -52,6 +52,17 @@ export default function ProjectFeatures({ project }){
                     <span key={s + index}>"{s}" </span>
                 ))}
             </motion.p>
+            <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true}} 
+            >
+                <span className='project-features--bold'>Librairies: </span>
+                {project.library.map((s, index) => (
+                    <span key={s + index}>"{s}" </span>
+                ))}
+            </motion.p>
         </section>
     )
 }
