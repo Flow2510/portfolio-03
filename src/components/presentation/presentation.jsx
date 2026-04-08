@@ -3,6 +3,8 @@ import './presentation.scss';
 import FadeInText from '../fadeintext/fadeintext';
 import List from '../list/list';
 
+import profil from '../../assets/images/silhouette.webp'
+
 export default function Presentation() {
     const stud = [
         "'Integrateur Web' OpenClassRooms [2026]", 
@@ -45,7 +47,7 @@ export default function Presentation() {
                             whileInView={{ y: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            src="/src/assets/images/silhouette.webp" 
+                            src={profil}
                             alt="" 
                         />
                     </motion.div>

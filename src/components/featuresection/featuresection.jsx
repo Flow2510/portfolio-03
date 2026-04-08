@@ -4,32 +4,38 @@ import FadeInText from '../fadeintext/fadeintext';
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
+import dev from "../../assets/images/frontend.webp"
+import react from "../../assets/images/react.webp"
+import design from "../../assets/images/device.webp"
+import animation from "../../assets/images/animation.webp"
+import perf from "../../assets/images/perf.webp"
+
 
 export default function FeatureSection({ setSelectedCategories }) {
     const features = [
         {
             title: "Développement Front-End",
-            image: "/src/assets/images/frontend.webp",
+            image: dev,
             alt: "Ecran d'ordinateur avec ligne de code dans un éditeur de texte"
         },
         {
             title: "React",
-            image: "/src/assets/images/react.webp",
+            image: react,
             alt: "Logo stylisé de REACT"
         },
         {
             title: "Responsive design",
-            image: "/src/assets/images/device.webp",
+            image: design,
             alt: "Illustration d'un interface sur mobile, tablette et grand écran"
         },
         {
             title: "Animations & interactions",
-            image: "/src/assets/images/animation.webp",
+            image: animation,
             alt: "Illustration d'un design UX"
         },
         {
             title: "Performance web & SEO",
-            image: "/src/assets/images/perf.webp",
+            image: perf,
             alt: "Illustration d'un écran d'ordinateur avec un compteur de performance"
         }
     ];
