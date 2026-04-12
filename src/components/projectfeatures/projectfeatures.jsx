@@ -27,7 +27,7 @@ export default function ProjectFeatures({ project }){
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
                 >
-                    <span className='project-features--bold'>Link: </span> 
+                    <span className='project-features--bold'>Lien: </span> 
                     <a target='_blank' href={project.link}>{project.link} <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </motion.p>
             }
@@ -38,7 +38,8 @@ export default function ProjectFeatures({ project }){
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
                 >
-                    <span className='project-features--bold'>Link:</span> {project.git}
+                    <span className='project-features--bold'>Github: </span> 
+                        <a target='_blank' href={project.git}>{project.git} <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </motion.p>
             }
             <motion.p

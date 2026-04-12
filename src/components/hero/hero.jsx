@@ -14,7 +14,7 @@ export default function Hero() {
                 <div className='hero__content-wrapper'>
                     <motion.p 
                         className='hero__content-text'
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true}}
@@ -23,7 +23,7 @@ export default function Hero() {
                     </motion.p>
                     <motion.p 
                         className='hero__content-text'
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}    
                         viewport={{ once: true}} 

@@ -134,7 +134,7 @@ export default function Presentation() {
                                 viewport={{ once: true }}
                                 className='presentation__list-item'
                             >
-                                <a target='_blank' href="https://www.github.com">Download</a>
+                                <a target='_blank' href="/public/CV.pdf">Télécharger <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </motion.li>
                         </ul>
                     </div>

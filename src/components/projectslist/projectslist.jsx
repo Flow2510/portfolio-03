@@ -64,7 +64,7 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                         >
                             <motion.div 
                                 style={{ height: "100%" }}
-                                initial={{ y: "100%" }}
+                                initial={{ y: 0 }}
                                 whileInView={{ y: 0 }}
                                 transition={{ duration: 0.5 }}
                                 viewport={{ once: true, }}

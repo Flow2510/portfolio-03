@@ -35,11 +35,20 @@ export default function Gallery({ projects }) {
             <div className='gallery__sticky'>
                 <motion.div className='gallery__wrapper'  style={{ x }}>
                     {projects.map((project, index) => (
-                        <div key={project.id + index} ref={itemRef} className='gallery__wrapper-container'>
+                        <motion.div 
+                            key={project.id + index} 
+                            ref={itemRef} 
+                            className='gallery__wrapper-container'
+                            viewport={{ once: true }}
+                            initial={ isDesktop? { x: 100 } : { y: 100 }}
+                            whileInView={ isDesktop? { x:0 } : { y: 0 }}
+                            transition={isDesktop? { duration: 0.8 } : { duration: 0.5 }}
+                            exit={false}
+                        >
                             <ProjectCard
                                 project={project}
                             />
-                        </div>
+                        </motion.div>
                     ))}
                 </motion.div>
             </div>
