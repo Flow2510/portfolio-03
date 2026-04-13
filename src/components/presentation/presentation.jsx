@@ -9,7 +9,7 @@ export default function Presentation() {
     const stud = [
         "'Integrateur Web' OpenClassRooms [2026]", 
         "'HTML, CSS, JS' W3School [2025]", 
-        "'Responsive Web Designe Certification' FreeCodeCamp [2025]", 
+        "'Responsive Web Design Certification' FreeCodeCamp [2025]", 
     ];
 
     const comp = [
@@ -34,7 +34,7 @@ export default function Presentation() {
     return(
         <section className='presentation'>
             <h2>
-                <FadeInText text={"À propos de moi"}/>
+                <FadeInText text={"Mon parcours"}/>
             </h2>
             <div className='presentation__wrapper'>
                 <div className='presentation__container'>
