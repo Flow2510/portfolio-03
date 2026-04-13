@@ -3,7 +3,7 @@ import ProjectCard from '../project-card/project-card';
 import './gallery.scss';
 import { motion, useScroll, useTransform } from 'motion/react';
 
-export default function Gallery({ projects }) {
+export default function Gallery({ projects, sectionRef }) {
     const [itemWidth, setItemWidth] = useState(window.innerWidth);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
@@ -23,15 +23,14 @@ export default function Gallery({ projects }) {
         : 
             0;
 
-    const scrollRef = useRef(null);
     const { scrollYProgress } = useScroll({
-        target: scrollRef,
+        target: sectionRef,
         offset: ["start start", "end end"]
     });
     const x = useTransform(scrollYProgress, [0, 1], [0, isDesktop ? -totalDistance : 0]);
 
     return(
-        <section className='gallery' id='gallery' ref={scrollRef}>
+        <section className='gallery' id='gallery' ref={sectionRef}>
             <div className='gallery__sticky'>
                 <motion.div className='gallery__wrapper'  style={{ x }}>
                     {projects.map((project, index) => (

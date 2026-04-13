@@ -1,40 +1,49 @@
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './featuresection.scss';
 import FadeInText from '../fadeintext/fadeintext';
-import { motion } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 
-import dev from "../../assets/images/frontend.webp"
-import react from "../../assets/images/react.webp"
-import design from "../../assets/images/device.webp"
-import animation from "../../assets/images/animation.webp"
-import perf from "../../assets/images/perf.webp"
+import layersAnimed from "../../assets/images/layers.gif"
+import layers from "../../assets/images/layers.png"
+import react from "../../assets/images/react.png"
+import device from "../../assets/images/device.png"
+import animation from "../../assets/images/animation.png"
+import perf from "../../assets/images/perf.png"
 
 
-export default function FeatureSection({ setSelectedCategories }) {
+export default function FeatureSection() {
+    const [activeCard, setActiveCard] = useState(null)
+
     const features = [
         {
             title: "Développement Front-End",
-            image: dev,
+            text: "Création d’interfaces modernes, accessibles et maintenables avec les technologies web actuelles.",
+            gif: layersAnimed,
+            image: layers,
             alt: "Ecran d'ordinateur avec ligne de code dans un éditeur de texte"
         },
         {
             title: "React",
+            text: "Développement d’applications dynamiques et performantes avec une architecture claire et scalable.",
             image: react,
             alt: "Logo stylisé de REACT"
         },
         {
             title: "Responsive design",
-            image: design,
+            text: "Interfaces pensées pour s’adapter parfaitement à tous les écrans, du mobile au desktop.",
+            image: device,
             alt: "Illustration d'un interface sur mobile, tablette et grand écran"
         },
         {
             title: "Animations & interactions",
+            text: "Création d’expériences fluides et engageantes grâce à des animations soignées et naturelles.",
             image: animation,
             alt: "Illustration d'un design UX"
         },
         {
             title: "Performance web & SEO",
+            text: "Optimisation des performances et du référencement pour des sites rapides et visibles.",
             image: perf,
             alt: "Illustration d'un écran d'ordinateur avec un compteur de performance"
         }
@@ -57,48 +66,59 @@ export default function FeatureSection({ setSelectedCategories }) {
         };
     }, [])
 
-    const navigate = useNavigate()
+    const ref=useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end end"]
+    })
+
+    const x = useTransform(scrollYProgress, [0, 1], [-150, 0])
 
     return(
-        <section className='feature-section'>
-            <div className='feature-section__content'>
-                <h2 className='feature-section__content-title'>
-                    <FadeInText 
-                        text={"Mes domaines"}
-                    />
-                </h2>
-            </div>
-            <div className='feature-section__wrapper'>
-                <motion.div 
-                    className='feature-section__border'
-                    initial={{ width: 0 }}
-                    whileInView={{ width: '100%' }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true}}
-                ></motion.div>
-                {features.map((feature, index) => (
-                    <button className='feature' key={feature + index} value={feature.title} onClick={() => {setSelectedCategories(feature.title); navigate('/projects');}}>
-                        <div className='feature__overlay'></div>
-                        <div className='feature__cursor' style={{ top: pos.y , left: pos.x}}>
-                            <img className='feature__cursor-image' src={feature.image} alt="" />
+        <section className='feature-section' ref={ref}>
+            <div style={{ maxWidth: 1200 }}>
+                <div className='feature-section__content'>
+                    <h2 className='feature-section__content-title'>
+                        <FadeInText 
+                            text={"Technologies & pratiques"}
+                        />
+                    </h2>
+                </div>
+                <motion.div layout className='feature-section__wrapper'>
+                    <motion.article
+                        className='feature feature--link'
+                        style={{ x }}
+                    >
+                        <div className='feature__content'>
+                            <h3>Mes projets</h3>
+                            <p>Animations, interactions et UI modernes. Chaque projet est une exploration.</p>
                         </div>
-                        <h3 className='feature__title'>
-                            <FadeInText text={feature.title}/>
-                        </h3>
-                        <p className='feature__index'>
-                            <FadeInText text={`[00${index + 1}]`} />
-                        </p>
-                        <motion.div 
-                            className='feature__border'
-                            initial={{ width: 0 }}
-                            whileInView={{ width: '100%' }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true}}
-                        ></motion.div>
-                    </button>
-                ))}
+                        <div className='feature__link-wrapper'>
+                            <NavLink className='feature__link'>Découvrir <i className="fa-solid fa-arrow-right"></i></NavLink>
+                        </div>
+                    </motion.article>
+                    {features.map((feature, index) => (
+                        <button
+                            className='feature__button' 
+                            key={feature.title + index} 
+                            onClick={() => setActiveCard(index)}
+                        >
+                            <article
+                                className={`feature${index === activeCard ? " feature--active" : ""}`}
+                            >
+                                <div className='feature__icon-wrapper'>
+                                    <img className={"feature__icon"} src={`${index === activeCard ? feature.gif : feature.image}`} alt={feature.alt}/>
+                                </div>
+                                <div className='feature__content'>
+                                    <h3>{feature.title}</h3>
+                                    <p>{feature.text}</p>
+                                </div>
+                            </article>
+                        </button>
+                    ))}
+                </motion.div>
             </div>
         </section>
     )
 }
-

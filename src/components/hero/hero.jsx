@@ -1,11 +1,20 @@
 import './hero.scss';
 import FadeInText from '../fadeintext/fadeintext';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 
-export default function Hero() {
+export default function Hero({ sectionRef }) {
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "start 40%"]
+    })
+
+    const scale = useTransform(scrollYProgress, [0, 1], ["1", "0.8"])
+    const x = useTransform(scrollYProgress, [0, 1], [0, -150])
+
     return(
         <section className='hero'>
-            <div className='hero__content'>
+            <motion.div className='hero__content' style={{ scale, x }}>
                 <h2 className='hero__content-title'>
                     <FadeInText 
                         text={"Développeur Front-End Junior React & UI"}
@@ -39,7 +48,7 @@ export default function Hero() {
                 >
                     <a className='hero__content-link' href='#gallery'>[<span className='hero__content-link--hover'></span>Explorez le portfolio<span className='hero__content-link--hover'></span>]</a>
                 </motion.div> 
-            </div>
+            </motion.div>
             <div className='hero__footer'>
                 <motion.div 
                     className='hero__footer-border'

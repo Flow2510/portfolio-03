@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 import './projectfeatures.scss';
 
-export default function ProjectFeatures({ project }){
+export default function ProjectFeatures({ project, sectionRef }){
     return(
-        <section className='project-features'>
+        <section className='project-features' ref={sectionRef}>
             <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}

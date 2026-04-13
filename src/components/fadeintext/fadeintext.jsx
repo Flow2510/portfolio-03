@@ -7,13 +7,13 @@ export default function FadeInText({ text }) {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.04
+        staggerChildren: 0.035
       }
     }
   };
 
   const letter = {
-    hidden: { opacity: 0, y: 15 },
+    hidden: { opacity: 0, y: 5 },
     visible: { opacity: 1, y: 0 }
   };
 

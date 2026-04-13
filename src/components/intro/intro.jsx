@@ -1,14 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import './intro.scss';
 import FadeInText from '../fadeintext/fadeintext';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 
-export default function Intro({ project }) {
+export default function Intro({ project, sectionRef }) {
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end end"]
+    })
+
+    const width = useTransform(scrollYProgress, [0, 1], ["100%", "50%"])
+
     return(
         <section className='intro'>
             <div className='intro__content'>
                 <motion.div
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true, amount: 0.3}} 
@@ -21,19 +28,17 @@ export default function Intro({ project }) {
                 <div
                      className={'intro__content-wrapper'}
                 >
-                    <motion.img 
-                        className={'intro__content-image'} 
-                        src={project.image} 
-                        alt="" 
-                        initial={{ y: "100%" }}
-                        whileInView={{ y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, amount: 0, margin: "50px" }} 
-                    />
+                    <motion.div style={{ width }}>
+                        <motion.img 
+                            className={'intro__content-image'} 
+                            src={project.image} 
+                            alt="" 
+                        />
+                    </motion.div>
                 </div>
                 <motion.p 
                     className={'intro__content-text'}
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
@@ -41,7 +46,7 @@ export default function Intro({ project }) {
                     {project.text}
                 </motion.p>
                 <motion.p 
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
