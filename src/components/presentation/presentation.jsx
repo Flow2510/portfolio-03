@@ -20,8 +20,9 @@ export default function Presentation() {
     ];
 
     const learn = [
-        "Next.js",
-        "Supabase",
+        "Node.js",
+        "Express",
+        "MongoDb",
         "UI / UX Design",
         "Animations"
     ];

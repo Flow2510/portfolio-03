@@ -7,15 +7,31 @@ import Header from './components/header/header'
 
 import projects from './data/projects.json'
 import Footer from './components/footer/footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProjectPage from './pages/projectpage'
 import ScrollToTop from './components/scrolltotop/scrolltotop'
+import Loader from './components/loader/loader'
+import { AnimatePresence } from 'motion/react'
 
 function App() {
+  const [loading, setLoading] = useState(true)
   const [selectedCategories, setSelectedCategories] = useState("Tous")
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
       <>
+        <AnimatePresence>
+          {loading && 
+            <Loader />
+          }
+        </AnimatePresence>
         <Header />
         <ScrollToTop />
         <Routes>
