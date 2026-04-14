@@ -77,13 +77,19 @@
         color: inherit;
         text-decoration: none;
         display: flex;
-        align-items: center;
-        
+        align-items: baseline;
         gap: 0.25rem;
 
-        i{
-            font-size: 0.6rem;
-            transform: translatey(0.08rem);
+        &-icon{
+            font-size: 0.8rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover{
+             
+            .feature__link-icon{
+                transform: translate(5px);
+            }
         }
     }
 

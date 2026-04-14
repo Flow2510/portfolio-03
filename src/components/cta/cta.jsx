@@ -14,6 +14,10 @@ export default function Cta({ to }) {
                 <div className='cta__content-wrapper'>                 
                     <motion.p 
                         className='cta__content-text'
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true}} 
                     >
                         <AnimatedText 
                             text={'Curieux de découvrir mon univers en front-end ? Explorez mon parcours, mes compétences et la manière dont je conçois mes projets avec React, SCSS et un design minimaliste. De la création de portfolios aux sites vitrines, je partage ici mes réalisations récentes ainsi que les techniques et outils que j’ai utilisés pour les construire. Découvrez mon approche et laissez-vous guider à travers mon travail.'}

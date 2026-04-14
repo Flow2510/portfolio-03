@@ -94,7 +94,7 @@ export default function FeatureSection() {
                             <p>Animations, interactions et UI modernes. Chaque projet est une exploration.</p>
                         </div>
                         <div className='feature__link-wrapper'>
-                            <NavLink className='feature__link' to={'/projects'}>Découvrir <i className="fa-solid fa-arrow-right"></i></NavLink>
+                            <NavLink className='feature__link' to={'/projects'}>Découvrir <i className="feature__link-icon fa-solid fa-arrow-right"></i></NavLink>
                         </div>
                     </motion.article>
                     {features.map((feature, index) => (
