@@ -28,7 +28,10 @@ export default function Intro({ project, sectionRef }) {
                 <div
                      className={'intro__content-wrapper'}
                 >
-                    <motion.div style={{ width }}>
+                    <motion.div 
+                        style={{ width }} 
+                        className='intro__content-transform'
+                    >
                         <motion.img 
                             className={'intro__content-image'} 
                             src={project.image} 

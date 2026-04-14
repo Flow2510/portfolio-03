@@ -54,13 +54,18 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                     transition={{ duration: 0.5 }}   
                 ></motion.div>
             </div>
-            <div className='projects-list__gallery'>
+            <motion.div 
+                className='projects-list__gallery'
+            >
                 {selectedCategories === "Tous" ? 
                     projects.map((project, index) => (
                         <motion.div 
                             key={project.id + index} 
                             className='projects-list__gallery-wrapper'
                             style={{ overflow: "hidden" }}
+                            initial={{ y: 100 }}
+                            whileInView={{ y: 0 }}
+                            transition={{ duration: 0.5}}
                         >
                             <motion.div 
                                 style={{ height: "100%" }}
@@ -84,7 +89,7 @@ export default function ProjectsList({projects, selectedCategories, setSelectedC
                         </div>
                     ))
                 }
-            </div>
+            </motion.div>
         </section>
     )
 }

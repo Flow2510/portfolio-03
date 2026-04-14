@@ -2,13 +2,13 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import './animatedtext.scss';
 import { useRef } from 'react';
 
-export default function AnimatedText({ text }) {
+export default function AnimatedText({ text, finalColor, transitionColor }) {
     const words = text.split(" ");
     const textRef = useRef(null);
 
     const { scrollYProgress } = useScroll({
         target: textRef,
-        offset: ["start end", "end center"]
+        offset: ["start 80%", "end 20%"]
     });
 
     return(
@@ -18,7 +18,7 @@ export default function AnimatedText({ text }) {
                 const color = useTransform(
                     scrollYProgress,
                     [index / words.length, (index + 1) / words.length],
-                    ["#ffffff80", "#fafafa"]
+                    [transitionColor, finalColor]
                 );
 
                 return(

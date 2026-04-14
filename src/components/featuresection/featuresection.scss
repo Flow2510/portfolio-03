@@ -47,6 +47,7 @@
     background: none;
     text-align: left;
     font-family: inherit;
+    padding: 0;
 }
 
 .feature{
@@ -77,10 +78,12 @@
         text-decoration: none;
         display: flex;
         align-items: center;
+        
         gap: 0.25rem;
 
         i{
             font-size: 0.6rem;
+            transform: translatey(0.08rem);
         }
     }
 

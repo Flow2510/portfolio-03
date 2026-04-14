@@ -12,6 +12,11 @@
         flex-direction: column;
         gap: 1rem;
 
+        &-transform{
+            height: 100%;
+            width: 100%;
+        }
+
         &-link{
             width: fit-content;
             color: inherit;

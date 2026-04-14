@@ -95,7 +95,7 @@
     "year": "2025",
     "link": "https://weathernowflow2510.netlify.app/",
     "git": "",
-    "tags": ["React", "Développement Front-End"],
+    "tags": ["React", "Développement Front-End", "Performance web & SEO"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "APIRest"],
     "image": "/images/weather-mockup.webp",
