@@ -11,8 +11,7 @@
     "image": "/images/portfolio3-mobile-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #3 affichant la page d’accueil sur un ordinateur portable",
     "intro": "Portfolio moderne avec animations et interface réactive.",
-    "text": "Ce projet présente mes travaux récents en front-end, avec une interface minimaliste et des animations subtiles. L'objectif était de rendre la navigation intuitive et agréable sur tous les appareils.",
-    "text2": "J'ai particulièrement travaillé la structure du code et le responsive design, tout en améliorant l'expérience utilisateur grâce à des transitions et micro-interactions cohérentes."
+    "text": "Ce projet présente mes travaux récents en front-end, avec une interface minimaliste et des animations subtiles. L'objectif était de rendre la navigation intuitive et agréable sur tous les appareils. J'ai particulièrement travaillé la structure du code et le responsive design, tout en améliorant l'expérience utilisateur grâce à des transitions et micro-interactions cohérentes."
   },
   {
     "name": "Porvenir",
@@ -26,8 +25,7 @@
     "image": "/images/porvenir-mockup.webp",
     "alt": "Mockup du site Porvenir affichant la page d’accueil sur un smartphone",
     "intro": "Site vitrine responsive pour une auberge avec présentation immersive.",
-    "text": "Le site permet de découvrir l'auberge et ses services tout en naviguant facilement sur mobile et desktop. J'ai porté une attention particulière à la clarté et à l'esthétique des pages.",
-    "text2": "Ce projet m’a permis de mettre en pratique mes compétences en responsive design et SEO, tout en améliorant la performance globale et la lisibilité du contenu."
+    "text": "Le site permet de découvrir l'auberge et ses services tout en naviguant facilement sur mobile et desktop. J'ai porté une attention particulière à la clarté et à l'esthétique des pages. Ce projet m’a permis de mettre en pratique mes compétences en responsive design et SEO, tout en améliorant la performance globale et la lisibilité du contenu."
   },
   {
     "name": "Portfolio 02",
@@ -41,8 +39,7 @@
     "image": "/images/portfolio02-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #2 affichant la page d’accueil sur une tablette",
     "intro": "Portfolio avec interface moderne et animations interactives.",
-    "text": "Ce projet présente mes compétences en React et en animations pour rendre l'interface vivante et intuitive. Le design minimaliste met en avant le contenu sans surcharge visuelle.",
-    "text2": "J'ai travaillé sur la structure du code et le responsive pour offrir une expérience fluide sur tous les appareils, en intégrant des transitions et micro-interactions."
+    "text": "Ce projet présente mes compétences en React et en animations pour rendre l'interface vivante et intuitive. Le design minimaliste met en avant le contenu sans surcharge visuelle. J'ai travaillé sur la structure du code et le responsive pour offrir une expérience fluide sur tous les appareils, en intégrant des transitions et micro-interactions."
   },
   {
     "name": "Spylt Clone",
@@ -56,8 +53,7 @@
     "image": "/images/spylt-mockup.webp",
     "alt": "Mockup du clone du site Spylt affichant la page d’accueil sur un ordinateur portable",
     "intro": "Reproduction du site Spylt avec animations et responsive design.",
-    "text": "Le projet consistait à recréer fidèlement l'interface et les animations du site original. J'ai veillé à ce que toutes les sections restent responsives et cohérentes sur différents écrans.",
-    "text2": "Cette réalisation m’a permis de pratiquer la duplication précise de design et d'interactions, tout en consolidant mes compétences en React et SCSS."
+    "text": "Le projet consistait à recréer fidèlement l'interface et les animations du site original. J'ai veillé à ce que toutes les sections restent responsives et cohérentes sur différents écrans. Cette réalisation m’a permis de pratiquer la duplication précise de design et d'interactions, tout en consolidant mes compétences en React et SCSS."
   },
   {
     "name": "REST Countries App",
@@ -71,8 +67,7 @@
     "image": "/images/restcountries-mockup.webp",
     "alt": "Mockup du site REST Countries affichant la liste des pays sur un smartphone",
     "intro": "Application web interactive pour explorer les pays du monde.",
-    "text": "Ce projet permet de rechercher et filtrer des pays à partir de l’API REST Countries. L’objectif est de proposer une interface claire pour consulter les informations essentielles comme la population, la région ou la capitale.",
-    "text2": "J’ai mis l’accent sur l’ergonomie, avec un système de recherche dynamique, des filtres par région et une navigation fluide. Le site est entièrement responsive et optimisé pour offrir une expérience rapide sur tous les appareils."
+    "text": "Ce projet permet de rechercher et filtrer des pays à partir de l’API REST Countries. L’objectif est de proposer une interface claire pour consulter les informations essentielles comme la population, la région ou la capitale. J’ai mis l’accent sur l’ergonomie, avec un système de recherche dynamique, des filtres par région et une navigation fluide."
   },
   {
     "name": "Portfolio",
@@ -86,8 +81,7 @@
     "image": "/images/portfolio-mockup.webp",
     "alt": "Mockup de mon portfolio personnel #1 affichant la page d’accueil sur un ordinateur portable",
     "intro": "Premier portfolio pour présenter mes projets et compétences front-end.",
-    "text": "Ce projet m’a permis de découvrir l’organisation d’un site complet avec React et SCSS. J’ai expérimenté le responsive et les animations basiques pour améliorer l’expérience utilisateur.",
-    "text2": "Chaque page a été pensée pour être claire et lisible, tout en me permettant d’apprendre à structurer un projet front-end de manière professionnelle."
+    "text": "Ce projet m’a permis de découvrir l’organisation d’un site complet avec React et SCSS. J’ai expérimenté le responsive et les animations basiques pour améliorer l’expérience utilisateur. Chaque page a été pensée pour être claire et lisible, tout en m’apprenant à structurer un projet front-end."
   },
   {
     "name": "Weather App",
@@ -101,7 +95,6 @@
     "image": "/images/weather-mockup.webp",
     "alt": "Mockup du defi WeatherApp affichant la page d’accueil sur une tablette",
     "intro": "Application météo responsive et intuitive pour découvrir les prévisions.",
-    "text": "Cette app permet de consulter rapidement les prévisions météo d’une ville avec une interface claire. J’ai travaillé le design pour que les informations soient faciles à lire sur tous les écrans.",
-    "text2": "Le projet m’a permis de mettre en pratique React et SCSS, tout en testant la réactivité et la performance des composants interactifs."
+    "text": "Cette app permet de consulter rapidement les prévisions météo d’une ville avec une interface claire. J’ai travaillé le design pour que les informations soient faciles à lire sur tous les écrans. Le projet m’a permis de mettre en pratique React et SCSS tout en testant la réactivité des composants."
   }
 ]

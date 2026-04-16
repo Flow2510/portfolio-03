@@ -1,9 +1,8 @@
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import './presentation.scss';
 import FadeInText from '../fadeintext/fadeintext';
 import List from '../list/list';
-
-import profil from '../../assets/images/silhouette.webp'
+import { useRef } from 'react';
 
 export default function Presentation() {
     const stud = [
@@ -32,38 +31,29 @@ export default function Presentation() {
         "+336 21 15 67 13"
     ];
 
+    const sectionRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: sectionRef,
+        offset: ["start 75%", "end start"]
+    })
+
+    const xList = [
+        useTransform(scrollYProgress, [0, 0.15, 0.35, 1], ["120%", "0%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0.05, 0.2, 0.4, 1], ["120%", "120%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0.1, 0.25, 0.45, 1], ["120%", "120%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0.15, 0.3, 0.5, 1], ["120%", "120%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0.2, 0.35, 0.55, 1], ["120%", "120%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0.25, 0.4, 0.6, 1], ["120%", "120%", "0%", "0%"])
+    ];
+
     return(
         <section className='presentation'>
             <h2>
                 <FadeInText text={"Mon parcours"}/>
             </h2>
-            <div className='presentation__wrapper'>
-                <div className='presentation__container'>
-                    <motion.div 
-                        className='presentation__image-wrapper'
-                    >
-                        <motion.img 
-                            className='presentation__image' 
-                            initial={{ y: "100%" }}
-                            whileInView={{ y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            src={profil}
-                            alt="" 
-                        />
-                    </motion.div>
-                </div>
-                <div className='presentation__content'>
+            <div className='presentation__wrapper' ref={sectionRef}>
+                <div className='presentation__content' >
                     <div className='presentation__content-container'>
-                        <motion.p 
-                            className='presentation__content-text'
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}  
-                            viewport={{ once: true }}
-                        >
-                            Je suis un développeur front-end junior, passionné par la création d’interfaces simples et efficaces. Mon objectif est de construire des expériences web intuitives et accessibles.
-                        </motion.p>
                         <motion.p 
                             className='presentation__content-text'
                             initial={{ opacity: 0, y: 50 }}
@@ -83,10 +73,10 @@ export default function Presentation() {
                             Je continue à perfectionner mes compétences et à tester de nouvelles idées pour améliorer mes projets. Chaque site que je crée est pour moi une occasion d’allier esthétique et performance.
                         </motion.p>
                     </div>
-                    <List title={'Parcours:'} items={stud}/>
-                    <List title={'Stack:'} items={comp}/>
-                    <List title={'Focus actuel:'} items={learn}/>
-                    <div className='presentation__content-wrapper'>
+                    <List title={'Parcours:'} items={stud} x={xList[0]}/>
+                    <List title={'Stack:'} items={comp} x={xList[1]}/>
+                    <List title={'Focus actuel:'} items={learn} x={xList[2]}/>
+                    <motion.div className='presentation__content-wrapper' style={{ x: xList[3]}}>
                         <motion.p 
                             className='presentation__content-subtitle'
                             initial={{ opacity: 0, y: 50 }}
@@ -116,8 +106,8 @@ export default function Presentation() {
                                 <a target='_blank' href="https://www.linkedin.com">linkedin <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </motion.li>
                         </ul>
-                    </div>
-                    <div className='presentation__content-wrapper'>
+                    </motion.div>
+                    <motion.div className='presentation__content-wrapper' style={{ x: xList[4]}}>
                         <motion.p 
                             className='presentation__content-subtitle'
                             initial={{ opacity: 0, y: 50 }}
@@ -138,8 +128,8 @@ export default function Presentation() {
                                 <a target='_blank' href="/public/CV.pdf">Télécharger <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </motion.li>
                         </ul>
-                    </div>
-                    <List title={'Contact:'} items={contact}/>
+                    </motion.div>
+                    <List title={'Contact:'} items={contact} x={xList[5]}/>
                 </div>
             </div>
         </section>

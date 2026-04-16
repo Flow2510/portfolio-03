@@ -1,14 +1,13 @@
 import { motion } from 'motion/react'
 import './list.scss'
 
-export default function List({title, items}) {
+export default function List({title, items, x}) {
     return(
-        <div className='list'>
+        <motion.div 
+            style={{ x }}
+            className='list'
+        >
             <motion.p 
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}  
-                viewport={{ once: true }}
                 className='list__title'
             >
                 {title}
@@ -27,6 +26,6 @@ export default function List({title, items}) {
                     </motion.li>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     )
 }

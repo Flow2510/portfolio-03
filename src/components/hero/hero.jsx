@@ -1,8 +1,20 @@
 import './hero.scss';
 import FadeInText from '../fadeintext/fadeintext';
 import { motion, useScroll, useTransform } from 'motion/react';
+import { useState } from 'react';
+
+import git from '../../assets/images/git.png'
+import gitAnimated from '../../assets/images/gitanimated.gif'
+import linkedin from '../../assets/images/linkedin.png'
+import linkedinAnimated from '../../assets/images/linkedinanimated.gif'
+import mail from '../../assets/images/mail.png'
+import mailAnimated from '../../assets/images/mailanimated.gif'
+import SocialIcon from '../socialicon/socialicon';
 
 export default function Hero({ sectionRef }) {
+    const [gitHover, setGitHover] = useState(false)
+    const [linkedinHover, setLinkedinHover] = useState(false)
+    const [mailHover, setMailHover] = useState(false)
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -65,33 +77,27 @@ export default function Hero({ sectionRef }) {
                     className='hero__footer-social'
                     viewport={{ once: true}} 
                 >
-                    <a 
-                        href='https://github.com/Flow2510' 
-                        target='_blank' 
-                        className='hero__footer-link'
-                        rel="noopener noreferrer"
-                        aria-label='Voir mon profil GitHub (ouvre dans un nouvel onglet)'
-                    >
-                        <i className="fa-brands fa-square-github"></i>
-                    </a>
-                    <a
-                        className='hero__footer-link'
-                        href='https://www.linkedin.com/in/florian-sendra-3270961a1/' 
-                        target='_blank' 
-                        rel="noopener noreferrer"
-                        aria-label='Voir mon profil LinkedIn (ouvre dans un nouvel onglet)'
-                    >
-                        <i className="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a 
-                        href="mailto:exemple@exemple.fr" 
-                        target='__blank' 
-                        rel="noopener noreferrer"
-                        className='hero__footer-link'
-                        aria-label='M’envoyer un email (ouvre dans un nouvel onglet)'
-                    >
-                        <i className="fa-solid fa-envelope"></i>
-                    </a>
+                    <SocialIcon 
+                        icon={git}
+                        iconAnimated={gitAnimated}
+                        aria={"Voir mon profil GitHub (ouvre dans un nouvel onglet)"}
+                        href={"https://github.com/Flow2510"}
+                        filter={false}
+                    />
+                    <SocialIcon 
+                        icon={linkedin}
+                        iconAnimated={linkedinAnimated}
+                        aria={"Voir mon profil LinkedIn (ouvre dans un nouvel onglet)"}
+                        href={"https://www.linkedin.com/in/florian-sendra-3270961a1/"}
+                        filter={false}
+                    />
+                    <SocialIcon 
+                        icon={mail}
+                        iconAnimated={mailAnimated}
+                        aria={"M’envoyer un email (ouvre dans un nouvel onglet)"}
+                        href={"mailto:sendra.florian@gmail.com"}
+                        filter={false}
+                    />
                 </motion.div>
                 <div className='hero__footer-wrapper'>
                     <motion.p

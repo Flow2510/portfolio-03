@@ -1,15 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import './header.scss';
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import FadeInText from '../fadeintext/fadeintext';
+import SocialIcon from '../socialicon/socialicon';
+
+import git from '../../assets/images/git.png'
+import gitAnimated from '../../assets/images/gitanimated.gif'
+import linkedin from '../../assets/images/linkedin.png'
+import linkedinAnimated from '../../assets/images/linkedinanimated.gif'
+import mail from '../../assets/images/mail.png'
+import mailAnimated from '../../assets/images/mailanimated.gif'
+import RevealLink from '../reveallink/reveallink';
 
 export default function Header() {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 
     return(
-        <div className='header__wrapper'>
-            <header className='header'>
+        <header className='header'>
+            <div className='header__wrapper'>
                 <NavLink to={'/'} className='header__logo'>
                     <h1 
                         className='header__logo-title'
@@ -17,22 +26,84 @@ export default function Header() {
                         <FadeInText text={"Florian Sendra ©"}/>
                     </h1>
                 </NavLink>
-                <motion.nav 
-                    className='header__menu'
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}   
-                >
-                    <NavLink className='header__menu-link' to={'/'}><span className='header__menu-link--hover'>[</span>Accueil<span className='header__menu-link--hover'>]</span></NavLink>
-                    <NavLink className='header__menu-link' to={'/projects'}><span className='header__menu-link--hover'>[</span>Projets<span className='header__menu-link--hover'>]</span></NavLink>
-                    <NavLink className='header__menu-link' to={'/about'}><span className='header__menu-link--hover'>[</span>À propos<span className='header__menu-link--hover'>]</span></NavLink>
-                </motion.nav>
-                <button 
+                <AnimatePresence>
+                    {menuIsOpen &&
+                        <motion.div 
+                            className='header__menu'
+                            initial={{ x: "-100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                        >
+                            <motion.button 
+                                className='header__menu-close' 
+                                onClick={() => setMenuIsOpen(prev => !prev)}
+                            >
+                                <i className="fa-solid fa-bars-staggered"></i>
+                            </motion.button>
+                            <nav className='header__nav'>
+                                <NavLink 
+                                    className='header__nav-link' 
+                                    onClick={() => setMenuIsOpen(prev => !prev)} 
+                                    to={'/'}
+                                >
+                                    <RevealLink 
+                                        text={"Accueil"}
+                                    />
+                                </NavLink>
+                                <NavLink 
+                                    className='header__nav-link'
+                                    onClick={() => setMenuIsOpen(prev => !prev)}
+                                    to={'/projects'}
+                                >
+                                    <RevealLink 
+                                        text={"Projets"}
+                                    />                                    
+                                </NavLink>
+                                <NavLink 
+                                    className='header__nav-link' 
+                                    onClick={() => setMenuIsOpen(prev => !prev)} 
+                                    to={'/about'}
+                                >
+                                    <RevealLink 
+                                        text={"Infos"}
+                                    /> 
+                                </NavLink>
+                            </nav>
+                            <div className='header__social'>
+                                <SocialIcon 
+                                    icon={git}
+                                    iconAnimated={gitAnimated}
+                                    aria={"Voir mon profil GitHub (ouvre dans un nouvel onglet)"}
+                                    href={"https://github.com/Flow2510"}
+                                    filter={true}
+                                />
+                                <SocialIcon 
+                                    icon={linkedin}
+                                    iconAnimated={linkedinAnimated}
+                                    aria={"Voir mon profil LinkedIn (ouvre dans un nouvel onglet)"}
+                                    href={"https://www.linkedin.com/in/florian-sendra-3270961a1/"}
+                                    filter={true}
+                                />
+                                <SocialIcon 
+                                    icon={mail}
+                                    iconAnimated={mailAnimated}
+                                    aria={"M’envoyer un email (ouvre dans un nouvel onglet)"}
+                                    href={"mailto:sendra.florian@gmail.com"}
+                                    filter={true}
+                                />
+                            </div>
+                        </motion.div>
+                    }
+                </AnimatePresence>
+                <motion.button 
                     onClick={() => setMenuIsOpen(prev => !prev)}
+                    initial={{ x: 20, opacity: 0}}
+                    animate={{ x: 0, opacity: 1}}
+                    transition={{ duration: 0.5}}
                     className='header__button'
                 >
-                    <span className='header__button--left'></span>Menu<span className='header__button--right'></span>
-                </button>
+                    <i className="fa-solid fa-bars"></i>
+                </motion.button>
                 <motion.div 
                     className='header__border'
                     initial={{ width: 0 }}
@@ -41,15 +112,7 @@ export default function Header() {
                     viewport={{ once: true }}
                 >
                 </motion.div>
-            </header>
-            <div className={`mobile-header${menuIsOpen ?  " mobile-header--open" : ""}`}>
-                <nav className='mobile-header__menu'>
-                    <NavLink className='mobile-header__menu-link' to={'/'} onClick={() => menuIsOpen(prev => !prev)}>Accueil</NavLink>
-                    <NavLink className='mobile-header__menu-link' to={'/projects'} onClick={() => menuIsOpen(prev => !prev)}>Projets</NavLink>
-                    <NavLink className='mobile-header__menu-link' to={'/about'} onClick={() => menuIsOpen(prev => !prev)}>À propos</NavLink>
-                </nav>
             </div>
-            
-        </div>
+        </header>
     )
 }

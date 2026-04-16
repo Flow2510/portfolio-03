@@ -4,6 +4,7 @@ import Hero from "../components/hero/hero";
 import FeatureSection from "../components/featuresection/featuresection";
 import Info from "../components/info/info";
 import { useRef } from "react";
+import ScrollDriven from "../components/scrolldriven/scrolldriven";
 
 export default function Home({ projects, setSelectedCategories }) {
     const sectionRef = useRef(null)
@@ -14,6 +15,7 @@ export default function Home({ projects, setSelectedCategories }) {
             <Gallery projects={projects} sectionRef={sectionRef}/>
             <FeatureSection setSelectedCategories={setSelectedCategories}/>
             <Cta to={'/about'}/>
+            <ScrollDriven />
             <Info />
         </main>
     )

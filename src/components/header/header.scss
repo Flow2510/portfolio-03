@@ -1,20 +1,19 @@
-.header-wrapper{
-    position: relative;
-}
-
 .header{
     position: fixed;
     top: 0;
     width: 100%;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
     z-index: 100;
     background: #121212;
+    padding: 1rem;
 
     @media screen and (min-width: 768px){
         padding: 1rem 3rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
     }
 
     &__border{
@@ -32,84 +31,86 @@
 
         &-title{
             font-weight: 400;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
     }
 
     &__menu{
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fafafa;
+        z-index: 500;
 
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
+        &-close{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0 0.5rem;
+            border: none;
+            background: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            @media screen and (min-width: 768px){
+                right: 3rem;
+            }
+        }
+    }
+
+    &__nav{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.2rem;
+        padding: 0 1rem;
+
+        @media screen and (min-width: 768px){
+            padding: 0 3rem;
         }
 
         &-link{
-            color: #fafafa;
             text-decoration: none;
-            display: flex;
-            width: 95px;
-            justify-content: center;
+            color: #121212;
+            text-transform: uppercase;
+            font-family: "inter", sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 0 0.3rem;
+            width: fit-content;
+            line-height: 100%;
 
-            &--hover{
-                display: none;
-            }
-
-            &:hover{
-
-                .header__menu-link--hover{
-                    display: block;
-                }
+            @media screen and (min-width: 768px){
+                font-size: 3.5rem;
             }
         }
     }
 
     &__button{
         border: none;
+        padding: 0 0.5rem;
         background: none;
         color: #fafafa;
-        font-size: 1rem;
-        position: relative;
-
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
-}
-
-.mobile-header{
-    position: fixed;
-    top: -170px;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: #121212;
-    border-bottom: 1px solid;
-    transition: top 0.5s ease-in-out;
-    z-index: 10;
-
-    &--open{
-        top: 55px;
-        transition: top 0.5s ease-in-out;
-    }
-
-    &__menu{
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2rem 1rem;
         font-size: 1.2rem;
-
-        &-link{
-            color: #fafafa;
-            text-decoration: none;
-        }
+        position: relative;
+        cursor: pointer;
     }
 
-    @media screen and (min-width:768px){
-        display: none;
+    &__social{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+
+        @media screen and (min-width: 768px){
+            padding: 1rem 3rem;
+            gap: 3rem;
+        }
     }
 }

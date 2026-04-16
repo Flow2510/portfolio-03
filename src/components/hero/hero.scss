@@ -104,15 +104,12 @@
             color: inherit;
             text-decoration: none;
 
-            &:hover{
-                scale: 1.05;
-            }
+            &--icon{
+                width: 40px;
 
-            &--mail{
-                border: none;
-                background: none;
-                font-size: 1.8rem;
-                cursor: pointer;
+                &:hover{
+                    scale: 1.05;
+                }
             }
         }
     }

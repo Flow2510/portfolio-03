@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './intro.scss';
 import FadeInText from '../fadeintext/fadeintext';
 import { motion, useScroll, useTransform } from 'motion/react';
+import AnimatedText from '../animatedtext/animatedtext';
 
 export default function Intro({ project, sectionRef }) {
     const { scrollYProgress } = useScroll({
@@ -19,12 +20,14 @@ export default function Intro({ project, sectionRef }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true, amount: 0.3}} 
+                    style={{display: 'flex', flexDirection: "column", gap: "1rem"}}
                 >
                     <NavLink className={'intro__content-link'} to='/projects'>[Retour]</NavLink>
+                    <h2 className={'intro__content-title'}>
+                        <FadeInText text={project.name} />
+                    </h2>
                 </motion.div>
-                <h2 className={'intro__content-title'}>
-                    <FadeInText text={project.name} />
-                </h2>
+                
                 <div
                      className={'intro__content-wrapper'}
                 >
@@ -39,24 +42,21 @@ export default function Intro({ project, sectionRef }) {
                         />
                     </motion.div>
                 </div>
-                <motion.p 
-                    className={'intro__content-text'}
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true}} 
-                >
-                    {project.text}
-                </motion.p>
-                <motion.p 
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true}} 
-                    className={'intro__content-text'}
-                >
-                    {project.text2}
-                </motion.p>
+                <div className={'intro__text-wrapper'}>
+                    <motion.p 
+                        className={'intro__text'}
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true}} 
+                    >
+                        <AnimatedText 
+                            text={project.text}
+                            transitionColor={"#12121280"}
+                            finalColor={"#121212"}
+                        />
+                    </motion.p>
+                </div>
             </div>
         </section>
     )

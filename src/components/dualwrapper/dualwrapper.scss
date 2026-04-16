@@ -1,0 +1,115 @@
+.dual-wrapper{
+    background: #121212;
+    position: relative;
+    color: #fafafa;
+    padding: 6rem 1rem 1rem;
+    width: 100%;
+
+    @media screen and (min-width:768px){
+        padding: 6rem 3rem 5rem;
+    }
+    
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__content{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        &-text{
+            line-height: 130%;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width:768px){
+                width: 70%;
+                max-width: 850px;
+            }
+
+            &--opacity{
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    &__gallery{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+
+        @media screen and (min-width:768px) {
+            flex-direction: row;
+            height: 300vh;
+            position: relative;
+        }
+    }
+
+    &__item{
+        height: 600px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+
+        @media screen and (min-width:768px) {
+            position: sticky;
+            top: 9rem;
+        }
+
+        &-image{
+            background: linear-gradient(black, white, black);
+            width: 100%;
+            object-fit: cover;
+            height: 1000px;
+        }
+    }
+
+    &__features{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        position: relative;
+
+        &-title{
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        &-subtitle{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        &-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &-content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    &__feature{
+        max-width: 90%;
+        
+        &-text{
+            opacity: 0.6;
+        }
+    }
+}

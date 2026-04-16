@@ -65,7 +65,7 @@ export default function FeatureSection() {
     })
 
     const x = useTransform(scrollYProgress, [0, 1], [-150, 0])
-
+    const y = useTransform(scrollYProgress, [0, 1], [-150, 0])
     const cardHandleClick = (index) => {
         if(index === activeCard){
             setActiveCard(null)
@@ -87,7 +87,7 @@ export default function FeatureSection() {
                 <motion.div layout className='feature-section__wrapper'>
                     <motion.article
                         className='feature feature--link'
-                        style={{ x }}
+                        style={{ x, y }}
                     >
                         <div className='feature__content'>
                             <h3>Mes projets</h3>

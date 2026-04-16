@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import Info from "../components/info/info";
 import Intro from "../components/intro/intro";
-import ProjectsGallery from "../components/projectsgallery/projectsgallery";
 import ProjectFeatures from "../components/projectfeatures/projectfeatures";
 import ReturnSection from "../components/returnsection/returnsection";
 import { useRef } from "react";
@@ -18,7 +17,6 @@ export default function ProjectPage({projects}) {
                 sectionRef={sectionRef}
             />
             <ProjectFeatures project={project}/>
-            {/* <ProjectsGallery project={project}/> */}
             <ReturnSection />
             <Info />
         </main>
