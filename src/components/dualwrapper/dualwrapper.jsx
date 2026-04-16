@@ -4,6 +4,9 @@ import { useRef } from 'react';
 import { useWindowWidth } from '../../functions/useWindowWidth';
 import FadeInText from '../fadeintext/fadeintext';
 
+import photo1 from "../../assets/images/silhouette.webp"
+import photo2 from "../../assets/images/silhouette2.webp"
+
 export default function DualWrapper({ sectionBref }) {
     const galleryRef = useRef(null)
     const windowWidth = useWindowWidth();
@@ -41,13 +44,13 @@ export default function DualWrapper({ sectionBref }) {
                             className='dual-wrapper__item'
                             style={{width: widthA}}
                         >
-                            <motion.img style={{ y }} className='dual-wrapper__item-image' src="/src/assets/images/silhouette.webp" alt="" />
+                            <motion.img style={{ y }} className='dual-wrapper__item-image' src={photo1} alt="" />
                         </motion.div>
                         <motion.div 
                             style={{width: widthB}}
                             className='dual-wrapper__item'
                         >
-                            <motion.img style={{ y }} className='dual-wrapper__item-image' src="/src/assets/images/silhouette2.webp" alt="" />
+                            <motion.img style={{ y }} className='dual-wrapper__item-image' src={photo2} alt="" />
                         </motion.div>
                     </div>
                 ) : (
