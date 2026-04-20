@@ -7,8 +7,9 @@ Le site suit une approche minimaliste et moderne, avec une navigation simple et 
 🚧 Projet en cours de développement:
 
 Les textes définitifs ne sont pas encore intégrés
-Tous les projets ne sont pas encore ajoutés
-La police finale n’est pas encore choisie
+La sélection de projets n'a pas encore été ajoutée
+Les images et mock-ups seront ajoutés au fur et à mesure du développement
+Les polices définitives n’ont pas encore été choisies
 Le logo n’est pas encore créé
 Certaines parties du design peuvent encore évoluer
 Les animations ne sont pas définitives
@@ -24,18 +25,6 @@ Amélioration des performances
 🧭 React Router
 📂 Données locales (JSON)
 🧶 Yarn
-
-
-🧩 Fonctionnalités:
-
-Galerie horizontale sur la page d’accueil
-Page avec tous les projets (layout en grid)
-Page About
-Page dynamique pour chaque projet
-Navigation fluide avec React Router
-Design minimaliste
-Responsive mobile / tablette / desktop
-Structure de composants claire et réutilisable
 
 
 📁 Structure du site:

@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import './header.scss';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import FadeInText from '../fadeintext/fadeintext';
 import SocialIcon from '../socialicon/socialicon';
 
 import git from '../../assets/images/git.png'
@@ -23,7 +22,7 @@ export default function Header() {
                     <h1 
                         className='header__logo-title'
                     >
-                        <FadeInText text={"Florian Sendra ©"}/>
+                        Florian Sendra ©
                     </h1>
                 </NavLink>
                 <AnimatePresence>
@@ -34,7 +33,15 @@ export default function Header() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                         >
+                            <div to={'/'} className='header__menu-logo'>
+                                <h1 
+                                    className='header__menu-title'
+                                >
+                                    Florian Sendra ©
+                                </h1>
+                            </div>
                             <motion.button 
+                                aria-label='Fermeture du menu'
                                 className='header__menu-close' 
                                 onClick={() => setMenuIsOpen(prev => !prev)}
                             >
@@ -96,6 +103,7 @@ export default function Header() {
                     }
                 </AnimatePresence>
                 <motion.button 
+                    aria-label='Ouverture du menu'
                     onClick={() => setMenuIsOpen(prev => !prev)}
                     initial={{ x: 20, opacity: 0}}
                     animate={{ x: 0, opacity: 1}}

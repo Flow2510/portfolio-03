@@ -1,0 +1,65 @@
+.carousel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &__control{
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        &-button{
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            border-radius: 9999px;
+            border: none;
+            align-items: center;
+            background: #121212;
+            color: #fafafa;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color: #121212;
+                background: #fafafa;
+            }
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background: linear-gradient(to top, #12121280, transparent);
+    }
+
+    &__title{
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        font-size: 1.5rem;
+        font-family: "antonio", sans-serif;
+        display: inline-block;
+
+        &--font{
+            font-size: 1rem;
+        }
+    }
+}

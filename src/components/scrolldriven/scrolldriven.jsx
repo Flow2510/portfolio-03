@@ -3,15 +3,23 @@ import './scrolldriven.scss';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
 import FadeInText from '../fadeintext/fadeintext';
 
-import fork from '../../assets/images/fork.gif'
-import animation from '../../assets/images/animation2.gif'
-import column from '../../assets/images/column.gif'
-import computer from '../../assets/images/computer.gif'
+import forkAnimated from '../../assets/images/fork.gif'
+import animationAnimated from '../../assets/images/animation2.gif'
+import columnAnimated from '../../assets/images/column.gif'
+import computerAnimated from '../../assets/images/computer.gif'
+
+import fork from '../../assets/images/fork.png'
+import animation from '../../assets/images/animation2.png'
+import column from '../../assets/images/column.png'
+import computer from '../../assets/images/computer.png'
 
 export default function ScrollDriven() {
+    const [itemIndex, setItemIndex] = useState(0)
+
     const data = [
         {
             title: "Interfaces modernes",
+            gif: columnAnimated,
             icon: column,
             text: "Je conçois des interfaces claires et actuelles, en mettant l’accent sur la lisibilité et la hiérarchie visuelle. L’objectif est de proposer une expérience agréable, où l’utilisateur comprend rapidement où aller et comment interagir.",
             alt: "Icone d'un ordinateur representant une interface moderne sur écran large",
@@ -19,6 +27,7 @@ export default function ScrollDriven() {
         },
         {
             title: "Sites responsives",
+            gif: computerAnimated,
             icon: computer,
             text: "Chaque interface est pensée pour s’adapter naturellement à tous les formats. Du mobile au desktop, je veille à conserver une navigation fluide, cohérente et confortable, sans perte d’information ni de qualité visuelle.",
             alt: "Icone d'une grille qui bouge represantant une interface qui change selon les écrans",
@@ -26,6 +35,7 @@ export default function ScrollDriven() {
         },
         {
             title: "Animations fluides",
+            gif: animationAnimated,
             icon: animation,
             text: "Les animations accompagnent la navigation et apportent du rythme à l’interface. Je les utilise pour guider l’utilisateur, rendre les interactions plus naturelles et renforcer la sensation de fluidité.",
             alt: "Trois cercles a la suite representant des animations",
@@ -33,6 +43,7 @@ export default function ScrollDriven() {
         },
         {
             title: "Code structuré",
+            gif: forkAnimated,
             icon: fork,
             text: "Je développe des bases solides et organisées, en privilégiant des composants réutilisables et une structure claire. Cela permet de faire évoluer les projets facilement tout en gardant un code lisible et maintenable.",
             alt: "icone d'un fork representant la structure du code",
@@ -61,7 +72,16 @@ export default function ScrollDriven() {
         useTransform(progressB, [0.45, 0.6, 0.7, 0.8], [0, 150, 150, 0]),
         useTransform(progressB, [0.7, 0.8, 0.9, 0.9], [0, 150, 150, 150])
     ];
-    
+
+    useMotionValueEvent(progressB, "change", () => {
+        const values = height.map((h) => h.get());
+
+        const activeIndex = values.findIndex((v) => v >= 149); // tolérance
+
+        if (activeIndex !== -1) {
+            setItemIndex(activeIndex);
+        }
+    });
     useMotionValueEvent(progressA, "change", (latest) => {
         if (latest >= 1) {
             setTimeout(() => setVisible(false), 400)
@@ -102,10 +122,10 @@ export default function ScrollDriven() {
                         {data.map((d, index) => (
                             <div 
                                 key={d.title + index}
-                                className='accordeon'
+                                className={`accordeon${ itemIndex === index ? " accordeon--active" : ""}`}
                             >
                                 <div className='accordeon__icon-wrapper'>
-                                    <img className='accordeon__icon' src={d.icon} alt={d.alt} />
+                                    <img className='accordeon__icon' src={ itemIndex === index ? d.gif : d.icon } alt={d.alt} style={ itemIndex === index ? { filter: "brightness(100)" } : {} }/>
                                 </div>
                                 <div className='accordeon__content'>
                                     <motion.p className='accordeon__content-text' style={{ height: height[index]}}>{d.text}</motion.p>

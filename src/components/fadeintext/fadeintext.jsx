@@ -7,13 +7,13 @@ export default function FadeInText({ text }) {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.035
+        staggerChildren: 0.03
       }
     }
   };
 
   const letter = {
-    hidden: { opacity: 0, y: 5 },
+    hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 }
   };
 
@@ -22,17 +22,18 @@ export default function FadeInText({ text }) {
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px"}}
     >
       {words.map((word, i) => (
         <span
-          key={i}
-          style={{ display: "inline-block", whiteSpace: "nowrap", overflow: "hidden" }}
+          key={word + i}
+          style={{ display: "inline-block", whiteSpace: "nowrap" }}
         >
           {word.split("").map((char, index) => (
             <motion.span
-              key={index}
+              key={char + index}
               variants={letter}
+              transition={{ ease: "linear", type: "tween", duration: 0.2 }}
               style={{ display: "inline-block" }}
             >
               {char}

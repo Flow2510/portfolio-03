@@ -1,7 +1,5 @@
 import './hero.scss';
-import FadeInText from '../fadeintext/fadeintext';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useState } from 'react';
 
 import git from '../../assets/images/git.png'
 import gitAnimated from '../../assets/images/gitanimated.gif'
@@ -12,9 +10,6 @@ import mailAnimated from '../../assets/images/mailanimated.gif'
 import SocialIcon from '../socialicon/socialicon';
 
 export default function Hero({ sectionRef }) {
-    const [gitHover, setGitHover] = useState(false)
-    const [linkedinHover, setLinkedinHover] = useState(false)
-    const [mailHover, setMailHover] = useState(false)
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -27,11 +22,15 @@ export default function Hero({ sectionRef }) {
     return(
         <section className='hero'>
             <motion.div className='hero__content' style={{ scale, x }}>
-                <h2 className='hero__content-title'>
-                    <FadeInText 
-                        text={"Développeur Front-End Junior React & UI"}
-                    />
-                </h2>
+                <motion.h2 
+                    className='hero__content-title'
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true}}
+                >
+                    <span>Développeur </span><span>Front-End React & UI</span>
+                </motion.h2>
                 <div className='hero__content-wrapper'>
                     <motion.p 
                         className='hero__content-text'

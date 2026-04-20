@@ -1,55 +1,97 @@
-import { useEffect, useRef, useState } from 'react';
-import ProjectCard from '../project-card/project-card';
-import './gallery.scss';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react'
+import './gallery.scss'
+import { useRef, useState } from 'react'
 
-export default function Gallery({ projects, sectionRef }) {
-    const [itemWidth, setItemWidth] = useState(window.innerWidth);
+import Carousel from '../carousel/carousel'
+import AnimatedText from '../animatedtext/animatedtext'
+import FadeInText from '../fadeintext/fadeintext'
+import { NavLink } from 'react-router-dom'
+
+export default function Gallery({ sectionRef, projects }) {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
-
-    const itemRef = useRef(null);
-
-    useEffect(() => {
-    if (itemRef.current) {
-        setItemWidth(itemRef.current.offsetWidth);
-    }
-    }, []);
-   
-    const items = projects.length;
-    const gaps = 36; // ton espacement entre items
-    const itemWidthWithGap = itemWidth + gaps;
-    const totalDistance = isDesktop? 
-            itemWidthWithGap * (items - 1)
-        : 
-            0;
+    
+    const ref = useRef(null)
 
     const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start start", "end end"]
-    });
-    const x = useTransform(scrollYProgress, [0, 1], [0, isDesktop ? -totalDistance : 0]);
+        target: ref,
+        offset: ["start start", "end start"]
+    })
+
+    const xList = [
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-600px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-500px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "800px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "800px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-500px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "600px"]),
+        
+    ]
+
+    const yList = [
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-600px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "400px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-100px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "-300px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "100px"]),
+        useTransform(scrollYProgress, [0, 0.7], ["0", "600px"]),
+    ]
+
+    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 2]);
 
     return(
-        <section className='gallery' id='gallery' ref={sectionRef}>
-            <div className='gallery__sticky'>
-                <motion.div className='gallery__wrapper'  style={{ x }}>
-                    {projects.map((project, index) => (
-                        <motion.div 
-                            key={project.id + index} 
-                            ref={itemRef} 
-                            className='gallery__wrapper-container'
-                            viewport={{ once: true }}
-                            initial={ isDesktop? { x: 100 } : { y: 100 }}
-                            whileInView={ isDesktop? { x:0 } : { y: 0 }}
-                            transition={isDesktop? { duration: 0.8 } : { duration: 0.5 }}
-                            exit={false}
-                        >
-                            <ProjectCard
-                                project={project}
-                            />
-                        </motion.div>
-                    ))}
-                </motion.div>
+        <section className='gallery' ref={sectionRef}>
+            <div className='gallery__wrapper'>
+                <div className='gallery__intro'>
+                    <h2>
+                        <FadeInText 
+                            text={("Conception d’interfaces web")}
+                        />
+                    </h2>
+                    <p>
+                        <AnimatedText 
+                            transitionColor={"#12121280"}
+                            finalColor={"#121212"}
+                            text={"Je transforme des maquettes et des idées en interfaces web fonctionnelles. J’utilise des technologies modernes pour garantir des projets maintenables et performants."}
+                        />
+                    </p>
+                </div>
+                {isDesktop ? 
+                    <div className='gallery__sticky' ref={ref}>
+                        <div className='gallery__content'>
+                            <div className='gallery__content-wrapper'>
+                                {projects.slice(0, 6).map((p, index) => (
+                                    <motion.div 
+                                        className={`gallery__content-item gallery__content-item--${index + 1}`} 
+                                        key={p.name + index}
+                                        style={{ x: xList[index], y: yList[index] }}
+                                    >
+                                        <NavLink to={`/${p.id}`}>
+                                            <img 
+                                                className={`gallery__content-image`} 
+                                                src={p.image} 
+                                                alt={p.alt}                                                                                                
+                                            />
+                                        </NavLink>
+                                    </motion.div>
+                                ))}
+                                <motion.div
+                                    className={`gallery__content-carousel`} 
+                                    style={{ scale }}
+                                >
+                                    <Carousel
+                                        projects={projects}
+                                    />
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    :
+                    <div className='gallery__mobile'>
+                        <Carousel 
+                            projects={projects}
+                        />
+                    </div>
+                }
             </div>
         </section>
     )

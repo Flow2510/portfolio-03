@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import './reveallink.scss'
 
-export default function RevealLink({ href, text }) {
+export default function RevealLink({ text }) {
     const letters = text.split("")
 
     const STAGGER = 0.025

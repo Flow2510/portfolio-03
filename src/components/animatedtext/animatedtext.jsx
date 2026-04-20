@@ -8,7 +8,7 @@ export default function AnimatedText({ text, finalColor, transitionColor }) {
 
     const { scrollYProgress } = useScroll({
         target: textRef,
-        offset: ["start 80%", "end 20%"]
+        offset: ["start 80%", "end 25%"]
     });
 
     return(

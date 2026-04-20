@@ -1,11 +1,12 @@
 .list{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 
     &__title{
         min-width: 120px ;
         width: 120px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
 
         @media screen and (min-width:768px) {
             min-width: 150px;
@@ -22,7 +23,7 @@
     }
 
     &__item{
-        font-size: 1.2rem;
+        font-size: 1rem;
 
         a{
             color: inherit;

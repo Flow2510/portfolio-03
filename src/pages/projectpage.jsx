@@ -4,6 +4,7 @@ import Intro from "../components/intro/intro";
 import ProjectFeatures from "../components/projectfeatures/projectfeatures";
 import ReturnSection from "../components/returnsection/returnsection";
 import { useRef } from "react";
+import DualWrapper from "../components/dualwrapper/dualwrapper";
 
 export default function ProjectPage({projects}) {
     const { id } = useParams()
@@ -17,7 +18,14 @@ export default function ProjectPage({projects}) {
                 sectionRef={sectionRef}
             />
             <ProjectFeatures project={project}/>
-            <ReturnSection />
+            <DualWrapper 
+                photo1={project.image}
+                photo2={project.image}
+            />
+            <ReturnSection 
+                to={"/projects"}
+                text={"Retour aux Projets"}
+            />
             <Info />
         </main>
     )

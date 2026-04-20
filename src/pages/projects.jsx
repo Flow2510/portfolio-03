@@ -1,13 +1,14 @@
 import Info from "../components/info/info";
-import ProjectsList from "../components/projectslist/projectslist";
+import ProjectsGallery from "../components/projectsgallery/projectsgallery";
+import ReturnSection from "../components/returnsection/returnsection";
 
 export default function Projects({ projects, setSelectedCategories, selectedCategories }) {
     return(
         <main>
-            <ProjectsList 
-                projects={projects}
-                selectedCategories={selectedCategories}
-                setSelectedCategories={setSelectedCategories}
+            <ProjectsGallery />
+            <ReturnSection 
+                to={"/"}
+                text={"Retour a l'Accueil"}
             />
             <Info />
         </main>

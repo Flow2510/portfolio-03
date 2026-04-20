@@ -4,6 +4,8 @@ import FadeInText from '../fadeintext/fadeintext';
 import List from '../list/list';
 import { useRef } from 'react';
 
+import photo from '../../assets/images/silhouette.webp'
+
 export default function Presentation() {
     const stud = [
         "'Integrateur Web' OpenClassRooms [2026]", 
@@ -34,11 +36,11 @@ export default function Presentation() {
     const sectionRef = useRef(null);
     const {scrollYProgress} = useScroll({
         target: sectionRef,
-        offset: ["start 75%", "end start"]
+        offset: ["start 30%", "end start"]
     })
 
     const xList = [
-        useTransform(scrollYProgress, [0, 0.15, 0.35, 1], ["120%", "0%", "0%", "0%"]),
+        useTransform(scrollYProgress, [0, 0.15, 0.35, 1], ["120%", "120%", "0%", "0%"]),
         useTransform(scrollYProgress, [0.05, 0.2, 0.4, 1], ["120%", "120%", "0%", "0%"]),
         useTransform(scrollYProgress, [0.1, 0.25, 0.45, 1], ["120%", "120%", "0%", "0%"]),
         useTransform(scrollYProgress, [0.15, 0.3, 0.5, 1], ["120%", "120%", "0%", "0%"]),
@@ -48,12 +50,15 @@ export default function Presentation() {
 
     return(
         <section className='presentation'>
-            <h2>
-                <FadeInText text={"Mon parcours"}/>
-            </h2>
+            <div className='presentation__image-wrapper'>
+                <img className='presentation__image' src={photo} alt="" />
+            </div>
             <div className='presentation__wrapper' ref={sectionRef}>
                 <div className='presentation__content' >
                     <div className='presentation__content-container'>
+                        <h2>
+                            <FadeInText text={"Mon parcours"}/>
+                        </h2>
                         <motion.p 
                             className='presentation__content-text'
                             initial={{ opacity: 0, y: 50 }}

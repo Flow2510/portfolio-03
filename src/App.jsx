@@ -14,7 +14,7 @@ import Loader from './components/loader/loader'
 import { AnimatePresence } from 'motion/react'
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [selectedCategories, setSelectedCategories] = useState("Tous")
 
   useEffect(() => {
