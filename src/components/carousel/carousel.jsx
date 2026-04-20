@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './carousel.scss';
 import { AnimatePresence, motion } from 'motion/react';
+import { NavLink } from 'react-router-dom';
 
 export default function Carousel({ projects }){
     const [carouselIndex, setCarouselIndex] = useState(0)
@@ -45,21 +46,23 @@ export default function Carousel({ projects }){
                 >
                     <i className="fa-solid fa-chevron-right"></i>
                 </button>
-            </div>
+            </div>            
             <AnimatePresence mode='wait'>
-                <motion.img 
-                    key={projects[carouselIndex].id}
-                    className='carousel__image' src={projects[carouselIndex].image} 
-                    alt={projects[carouselIndex].alt} 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    viewport={{ once: true }}
-                    exit={{ opacity: 0 }}
-                    loading='lazy'
-                />
+                <NavLink to={`/${projects[carouselIndex].id}`}>
+                    <motion.img 
+                        key={projects[carouselIndex].id}
+                        className='carousel__image' src={projects[carouselIndex].image} 
+                        alt={projects[carouselIndex].alt} 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        viewport={{ once: true }}
+                        exit={{ opacity: 0 }}
+                        loading='lazy'
+                    />
+                </NavLink>
             </AnimatePresence>
-            <div className='carousel__overlay'></div>
+
             <AnimatePresence mode='wait'>
                 <motion.span 
                     key={projects[carouselIndex].name}

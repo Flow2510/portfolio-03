@@ -11,13 +11,12 @@
         text-align: center;
         background: #fafafa;
         color: #121212;
-        padding: 5rem 1rem;
+        padding: 6rem 1rem;
         display: flex;
         gap: 1.5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         
         h2{
             font-size: 2rem;
@@ -55,6 +54,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 0.5rem;
+            overflow: hidden;
 
             &--1{
                 grid-column: 1 / span 3;
