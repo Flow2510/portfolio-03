@@ -21,7 +21,7 @@ export default function ScrollDriven() {
             title: "Interfaces modernes",
             gif: columnAnimated,
             icon: column,
-            text: "Je conçois des interfaces claires et actuelles, en mettant l’accent sur la lisibilité et la hiérarchie visuelle. L’objectif est de proposer une expérience agréable, où l’utilisateur comprend rapidement où aller et comment interagir.",
+            text: "Je développe des interfaces web claires et structurées avec React. J’accorde une attention particulière à la hiérarchie visuelle et à la lisibilité pour améliorer l’expérience utilisateur.",
             alt: "Icone d'un ordinateur representant une interface moderne sur écran large",
             animation: "A"
         },
@@ -29,15 +29,15 @@ export default function ScrollDriven() {
             title: "Sites responsives",
             gif: computerAnimated,
             icon: computer,
-            text: "Chaque interface est pensée pour s’adapter naturellement à tous les formats. Du mobile au desktop, je veille à conserver une navigation fluide, cohérente et confortable, sans perte d’information ni de qualité visuelle.",
-            alt: "Icone d'une grille qui bouge represantant une interface qui change selon les écrans",
+            text: "Je crée des interfaces adaptatives qui s’ajustent à tous les écrans (mobile, tablette, desktop). L’objectif est de garantir une navigation fluide et cohérente sur tous les supports.",
+            alt: "Icone d'une grille qui bouge representant une interface qui change selon les écrans",
             animation: "B"
         },
         {
             title: "Animations fluides",
             gif: animationAnimated,
             icon: animation,
-            text: "Les animations accompagnent la navigation et apportent du rythme à l’interface. Je les utilise pour guider l’utilisateur, rendre les interactions plus naturelles et renforcer la sensation de fluidité.",
+            text: "J’intègre des animations légères en CSS et JavaScript pour améliorer la navigation et guider l’utilisateur dans l’interface sans nuire à la performance.",
             alt: "Trois cercles a la suite representant des animations",
             animation: "C"
         },
@@ -45,7 +45,7 @@ export default function ScrollDriven() {
             title: "Code structuré",
             gif: forkAnimated,
             icon: fork,
-            text: "Je développe des bases solides et organisées, en privilégiant des composants réutilisables et une structure claire. Cela permet de faire évoluer les projets facilement tout en gardant un code lisible et maintenable.",
+            text: "Je développe avec une structure claire basée sur des composants réutilisables. J’utilise React pour organiser le code et faciliter la maintenance et l’évolution des projets.",
             alt: "icone d'un fork representant la structure du code",
             animation: "D"
         }
@@ -114,7 +114,7 @@ export default function ScrollDriven() {
                     <div className='scroll-driven__content'>
                         <h2>
                             <FadeInText 
-                                text={"Des interfaces modernes, fluides et intuitives."}
+                                text={"Conception & développement d’interfaces"}
                             />
                         </h2>
                     </div>

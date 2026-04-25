@@ -4,8 +4,10 @@
     width: 100%;
     left: 0;
     z-index: 100;
-    background: #121212;
     padding: 1rem;
+    background: none; 
+    color: white;
+    mix-blend-mode: difference;
 
     @media screen and (min-width: 768px){
         padding: 1rem 3rem;
@@ -14,22 +16,15 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
-    }
-
-    &__border{
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 1px;
-        background: #fafafa;
+       
     }
 
     &__logo{
-        color: inherit;
         text-decoration: none;
 
         &-title{
+            color: white;
+            mix-blend-mode: difference;
             font-weight: 400;
             font-size: 1.3rem;
         }
@@ -90,9 +85,9 @@
             text-decoration: none;
             color: #121212;
             text-transform: uppercase;
-            font-family: "inter", sans-serif;
-            font-weight: 400;
-            font-size: 1.5rem;
+            font-family: "antonio", sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
             padding: 0 0.3rem;
             width: fit-content;
             line-height: 100%;
@@ -104,10 +99,10 @@
     }
 
     &__button{
+        color: inherit;
         border: none;
-        padding: 0 0.5rem;
+        padding: 0;
         background: none;
-        color: #fafafa;
         font-size: 1.2rem;
         position: relative;
         cursor: pointer;

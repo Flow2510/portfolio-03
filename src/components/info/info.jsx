@@ -2,24 +2,30 @@ import { motion } from 'motion/react'
 import FadeInText from '../fadeintext/fadeintext'
 import './info.scss'
 
+import mail from '../../assets/images/arobase.png'
+import phone from '../../assets/images/phone.png'
+import adress from '../../assets/images/location.png'
 
 export default function Info() {
     const data = [
         {
             text: "sendra.florian@gmail.com",
-            id: "e", 
+            id: "mail", 
+            image: mail,
             link: "mailto:sendra.florian@gmail.com",
             label: "M'envoyer un email (ouvre dans un nouvel onglet)"
         },
         {
             text: "+336 21 15 67 13",
-            id: "m",
+            id: "phone",
+            image: phone,
             link: "https://wa.me/0621156713",
             label: "Me contacter sur Whats'APP (ouvre dans un nouvel onglet)"
         },
         {
             text: "Perpignan, France",
-            id: "l",
+            id: "adress",
+            image: adress,
             link: "https://maps.app.goo.gl/48nhJjkEDVk739679",
             label: "Ouver Google Map sur ma localisation (ouvre dans un nouvel onglet)"
         }
@@ -29,7 +35,7 @@ export default function Info() {
             <div className='info__wrapper'>
                 <div className='info__content'>
                     <h2 className='info__content-title'>
-                        <FadeInText text={'Contact:'}/>
+                        <FadeInText text={'Contact :'}/>
                     </h2>
                 </div>
                 <div className='info__list'>
@@ -50,7 +56,7 @@ export default function Info() {
                             aria-label={d.label}
                         >
                             <div className='info__item-overlay'></div>
-                            <h3 className='info__item-title'><span className='info__item-id'>[{d.id}]</span> <FadeInText text={d.text}/></h3>
+                            <h3 className='info__item-title'><img src={d.image} className='info__item-icon' alt="" /> <FadeInText text={d.text}/></h3>
                             <motion.div 
                                 className='info__item-border'
                                 initial={{ width: 0 }}

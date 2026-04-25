@@ -44,19 +44,19 @@ export default function Gallery({ sectionRef, projects }) {
                 <div className='gallery__intro'>
                     <h2>
                         <FadeInText 
-                            text={("Conception d’interfaces web")}
+                            text={("Projets & réalisations")}
                         />
                     </h2>
                     <p>
                         <AnimatedText 
                             transitionColor={"#12121280"}
                             finalColor={"#121212"}
-                            text={"Je transforme des maquettes et des idées en interfaces web fonctionnelles. J’utilise des technologies modernes pour garantir des projets maintenables et performants."}
+                            text={"Voici une sélection de projets front-end réalisés pour mettre en pratique mes compétences en React, UI design et intégration d’interfaces modernes."}
                         />
                     </p>
                 </div>
                 {isDesktop ? 
-                    <div className='gallery__sticky' ref={ref}>
+                    <div className='gallery__sticky' ref={ref} id='gallery'>
                         <div className='gallery__content'>
                             <div className='gallery__content-wrapper'>
                                 {projects.slice(0, 6).map((p, index) => (
@@ -87,9 +87,11 @@ export default function Gallery({ sectionRef, projects }) {
                     </div>
                     :
                     <div className='gallery__mobile'>
-                        <Carousel 
-                            projects={projects}
-                        />
+                        <div className='gallery__mobile-wrapper'>
+                            <Carousel 
+                                projects={projects}
+                            />
+                        </div>
                     </div>
                 }
             </div>

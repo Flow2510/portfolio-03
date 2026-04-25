@@ -20,7 +20,7 @@ export default function Cta({ to }) {
                         viewport={{ once: true}} 
                     >
                         <AnimatedText 
-                            text={'Curieux de découvrir mon univers en front-end ? Explorez mon parcours, mes compétences et la manière dont je conçois mes projets avec React, SCSS et un design minimaliste. De la création de portfolios aux sites vitrines, je partage ici mes réalisations récentes ainsi que les techniques et outils que j’ai utilisés pour les construire. Découvrez mon approche et laissez-vous guider à travers mon travail.'}
+                            text={'Comment je conçois des interfaces web modernes avec React, SCSS et une approche centrée sur la simplicité et l’efficacité.'}
                             transitionColor={"#fafafa80"}
                             finalColor={"#fafafa"}
                         />
@@ -32,7 +32,7 @@ export default function Cta({ to }) {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true}} 
                 >
-                    <NavLink to={to} className='cta__content-link'>[<span className='cta__content-link--hover'></span>À propos<span className='cta__content-link--hover'></span>]</NavLink>
+                    <NavLink to={to} className='cta__content-link'>[<span className='cta__content-link--hover'></span>En savoir plus<span className='cta__content-link--hover'></span>]</NavLink>
                 </motion.div>
             </div>
         </section>

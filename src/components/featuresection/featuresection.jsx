@@ -21,39 +21,39 @@ export default function FeatureSection() {
 
     const features = [
         {
-            title: "Développement Front-End",
-            text: "Création d’interfaces modernes, accessibles et maintenables avec les technologies web actuelles.",
+            title: "Intégration Front-End",
+            text: "Intégration d’interfaces à partir de maquettes avec une attention particulière à la structure, la réutilisabilité et la qualité du code.",
             gif: layersAnimed,
             image: layers,
-            alt: "Icône représentant des couches empilées symbolisant la structure et l’organisation de composants ou de données."
+            alt: "Icône représentant des couches empilées symbolisant la structure et l’organisation de composants."
         },
         {
-            title: "React",
-            text: "Développement d’applications dynamiques et performantes avec une architecture claire et scalable.",
+            title: "Développement React",
+            text: "Création d’applications front-end modulaires avec React, en utilisant des composants réutilisables et une architecture claire.",
             gif: reactAnimed,
             image: react,
-            alt: "Icône représentant du code informatique avec des chevrons, symbolisant le développement et la programmation."
+            alt: "Icône représentant du code informatique avec des chevrons."
         },
         {
             title: "Responsive design",
-            text: "Interfaces pensées pour s’adapter parfaitement à tous les écrans, du mobile au desktop.",
+            text: "Adaptation des interfaces à tous les formats d’écran en utilisant des approches flexibles et modernes en CSS.",
             gif: responsiveAnimed,
             image: responsive,
-            alt: "Icône représentant un écran avec des flèches indiquant l’adaptation du contenu aux différentes tailles d’affichage"
+            alt: "Icône représentant un écran avec des flèches d’adaptation."
         },
         {
-            title: "Animations & interactions",
-            text: "Création d’expériences fluides et engageantes grâce à des animations soignées et naturelles.",
+            title: "UI Interactions",
+            text: "Ajout d’animations et micro-interactions pour améliorer la fluidité et l’expérience utilisateur sans nuire aux performances.",
             gif: animationAnimed,
             image: animation,
-            alt: "Icône composée de trois carrés représentant des modules qui s'anime"
+            alt: "Icône composée de blocs représentant des modules animés."
         },
         {
-            title: "Performance web & SEO",
-            text: "Optimisation des performances et du référencement pour des sites rapides et visibles.",
+            title: "Optimisation & performance",
+            text: "Optimisation des performances front-end et bonnes pratiques de structure pour garantir des interfaces rapides et efficaces.",
             gif: perfAnimed,
             image: perf,
-            alt: "Icône de flèche ascendante représentant la progression"
+            alt: "Icône de flèche ascendante représentant la progression."
         }
     ];
 
@@ -91,7 +91,9 @@ export default function FeatureSection() {
                     >
                         <div className='feature__content'>
                             <h3>Mes projets</h3>
-                            <p>Animations, interactions et UI modernes. Chaque projet est une exploration.</p>
+                            <p>
+                                Une sélection de projets front-end réalisés avec React : interfaces interactives, intégration d’API et expériences utilisateur modernes.
+                            </p>
                         </div>
                         <div className='feature__link-wrapper'>
                             <NavLink className='feature__link' to={'/projects'}>Découvrir <i className="feature__link-icon fa-solid fa-arrow-right"></i></NavLink>
