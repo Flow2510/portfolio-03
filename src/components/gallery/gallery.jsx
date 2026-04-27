@@ -12,31 +12,30 @@ export default function Gallery({ sectionRef, projects }) {
     
     const ref = useRef(null)
 
-    const { scrollYProgress } = useScroll({
+    const { scrollYProgress : progressA } = useScroll({
         target: ref,
         offset: ["start start", "end start"]
     })
 
     const xList = [
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-600px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-500px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "800px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "800px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-500px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "600px"]),
-        
-    ]
+  useTransform(progressA, [0, 0.7], ["0vw", "-60vw"]),
+  useTransform(progressA, [0, 0.7], ["0vw", "-50vw"]),
+  useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
+  useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
+  useTransform(progressA, [0, 0.7], ["0vw", "-40vw"]),
+  useTransform(progressA, [0, 0.7], ["0vw", "50vw"]),
+]
 
-    const yList = [
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-600px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "400px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-100px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "-300px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "100px"]),
-        useTransform(scrollYProgress, [0, 0.7], ["0", "600px"]),
-    ]
+const yList = [
+  useTransform(progressA, [0, 0.7], ["0vh", "-50vh"]),
+  useTransform(progressA, [0, 0.7], ["0vh", "40vh"]),
+  useTransform(progressA, [0, 0.7], ["0vh", "-16vh"]),
+  useTransform(progressA, [0, 0.7], ["0vh", "-36vh"]),
+  useTransform(progressA, [0, 0.7], ["0vh", "20vh"]),
+  useTransform(progressA, [0, 0.7], ["0vh", "60vh"]),
+]
 
-    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 2]);
+    const scale = useTransform(progressA, [0, 0.5], [1, 2]);
 
     return(
         <section className='gallery' ref={sectionRef}>
