@@ -100,7 +100,11 @@ export default function FeatureSection() {
                         </div>
                     </motion.article>
                     {features.map((feature, index) => (
-                        <button
+                        <motion.button
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y : 0, opacity: 1 }}
+                            viewport={{ once: true}}
+                            transition={{ duration: 1, delay: index / 10 }}
                             className='feature__button' 
                             key={feature.title + index} 
                             onClick={() => cardHandleClick(index)}
@@ -116,7 +120,7 @@ export default function FeatureSection() {
                                     <p>{feature.text}</p>
                                 </div>
                             </article>
-                        </button>
+                        </motion.button>
                     ))}
                 </motion.div>
             </div>

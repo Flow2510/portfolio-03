@@ -63,7 +63,7 @@
     }
 
     &__content{
-        max-width: 400px;
+        max-width: 500px;
         display: flex;
         flex-direction: column;
         height: fit-content;
@@ -75,6 +75,7 @@
 
         h2{
             text-align: center;
+            line-height: 110%;
 
             @media screen and (min-width: 768px){
                 text-align: left;

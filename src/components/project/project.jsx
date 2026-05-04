@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import './project.scss';
 import { useRef } from 'react';
 import AnimatedText from '../animatedtext/animatedtext';
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function Project({ project, index }) {
     const articleRef = useRef(null)
@@ -18,6 +19,12 @@ export default function Project({ project, index }) {
 
     const yBackground = useTransform(progressA, [0, 1], [-200, 200])
     const yContent = useTransform(progressB, [0, 1], [0, -200])
+
+    const name = () => {
+        return (
+                <i><span className='project__index--color'>#</span>0{index}</i>
+        )
+    }
 
     return(
         <article
@@ -37,11 +44,31 @@ export default function Project({ project, index }) {
                 className='project__wrapper' 
                 style={{ y: yContent }}
             >
-                <span className='project__index'>
-                    <i><span className='project__index--color'>#</span>0{index}</i>
-                </span>
+                <p className='project__index'>
+                    <MaskReveal 
+                            text={
+                                <i>
+                                    <span className="project__index--color">#</span>
+                                    0{index}
+                                </i>
+                            }
+                            backgroundColor={"#fafafa"}
+                            inView={index !== 1}
+                            animated={index === 1}
+                            delay={0.2}
+                        />
+                    
+                </p>
                 <motion.div className='project__content' >
-                    <h3>{project.name}</h3>
+                    <h3>
+                        <MaskReveal 
+                            text={project.name}
+                            backgroundColor={"#fafafa"}
+                            inView={index !== 1}
+                            animated={index === 1}
+                            delay={0}
+                        />
+                    </h3>
                     <p>
                         <AnimatedText 
                             text={project.intro}

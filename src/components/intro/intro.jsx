@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import './intro.scss';
-import FadeInText from '../fadeintext/fadeintext';
 import { motion, useScroll, useTransform } from 'motion/react';
 import AnimatedText from '../animatedtext/animatedtext';
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function Intro({ project, sectionRef }) {
     const { scrollYProgress } = useScroll({
@@ -16,15 +16,26 @@ export default function Intro({ project, sectionRef }) {
         <section className='intro'>
             <div className='intro__content'>
                 <motion.div
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
                     viewport={{ once: true, amount: 0.3}} 
                     style={{display: 'flex', flexDirection: "column", gap: "1rem"}}
                 >
-                    <NavLink className={'intro__content-link'} to='/projects'>[Retour]</NavLink>
+                    <NavLink className={'intro__content-link'} to='/projects'>
+                        <MaskReveal
+                            text={"[Retour]"}
+                            backgroundColor={"#121212"}
+                            animated={true}
+                            delay={0}
+                            inView={false}
+                        />
+                    </NavLink>
                     <h2 className={'intro__content-title'}>
-                        <FadeInText text={project.name} />
+                        <MaskReveal
+                            text={project.name}
+                            backgroundColor={"#121212"}
+                            animated={true}
+                            delay={0}
+                            inView={false}
+                        />
                     </h2>
                 </motion.div>
                 

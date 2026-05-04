@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import './scrolldriven.scss';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
-import FadeInText from '../fadeintext/fadeintext';
 
 import forkAnimated from '../../assets/images/fork.gif'
 import animationAnimated from '../../assets/images/animation2.gif'
@@ -12,6 +11,7 @@ import fork from '../../assets/images/fork.png'
 import animation from '../../assets/images/animation2.png'
 import column from '../../assets/images/column.png'
 import computer from '../../assets/images/computer.png'
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function ScrollDriven() {
     const [itemIndex, setItemIndex] = useState(0)
@@ -113,8 +113,19 @@ export default function ScrollDriven() {
                 >
                     <div className='scroll-driven__content'>
                         <h2>
-                            <FadeInText 
-                                text={"Conception & développement d’interfaces"}
+                            <MaskReveal
+                                text={"Conception &"}
+                                backgroundColor={"#131313"}
+                                animated={false}
+                                inView={true}
+                                delay={0}
+                            />
+                            <MaskReveal
+                                text={"développement d’interfaces"}
+                                backgroundColor={"#131313"}
+                                animated={false}
+                                inView={true}
+                                delay={0}
                             />
                         </h2>
                     </div>

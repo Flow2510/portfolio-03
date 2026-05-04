@@ -1,10 +1,10 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import './presentation.scss';
-import FadeInText from '../fadeintext/fadeintext';
 import List from '../list/list';
 import { useRef } from 'react';
 
 import photo from '../../assets/images/silhouette.webp'
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function Presentation() {
     const stud = [
@@ -50,14 +50,25 @@ export default function Presentation() {
 
     return(
         <section className='presentation'>
-            <div className='presentation__image-wrapper'>
+            <motion.div 
+                initial={{ width: "0%"}}
+                animate={{ width: "100%"}}
+                transition={{ duration: 0.5}}
+                className='presentation__image-wrapper'
+            >
                 <img className='presentation__image' src={photo} alt="" />
-            </div>
+            </motion.div>
             <div className='presentation__wrapper' ref={sectionRef}>
                 <div className='presentation__content' >
                     <div className='presentation__content-container'>
                         <h2>
-                            <FadeInText text={"Mon parcours"}/>
+                            <MaskReveal 
+                                text={"Mon parcours"}
+                                backgroundColor={"#121212"}
+                                animated={true}
+                                inView={false}
+                                delay={0.2}
+                            />
                         </h2>
                         <motion.p 
                             className='presentation__content-text'
@@ -78,10 +89,10 @@ export default function Presentation() {
                             Je continue à perfectionner mes compétences et à tester de nouvelles idées pour améliorer mes projets. Chaque site que je crée est pour moi une occasion d’allier esthétique et performance.
                         </motion.p>
                     </div>
-                    <List title={'Parcours:'} items={stud} x={xList[0]}/>
-                    <List title={'Stack:'} items={comp} x={xList[1]}/>
-                    <List title={'Focus actuel:'} items={learn} x={xList[2]}/>
-                    <motion.div className='presentation__content-wrapper' style={{ x: xList[3]}}>
+                    <List delay={0.1} animated={true} inView={false} title={'Parcours:'} items={stud}/>
+                    <List delay={0.2} animated={true} inView={false} title={'Stack:'} items={comp} />
+                    <List delay={0.3} animated={true} inView={false} title={'Focus actuel:'} items={learn}/>
+                    <motion.div className='presentation__content-wrapper' >
                         <motion.p 
                             className='presentation__content-subtitle'
                             initial={{ opacity: 0, y: 50 }}
@@ -89,7 +100,14 @@ export default function Presentation() {
                             transition={{ duration: 0.5 }} 
                             viewport={{ once: true }}
                         >
-                            Social:
+                            
+                            <MaskReveal 
+                                text={"Social:"}
+                                backgroundColor={"#121212"}
+                                animated={false}
+                                inView={true}
+                                delay={0.2}
+                            />
                         </motion.p>
                         <ul className='presentation__list'>
                             <motion.li 
@@ -112,7 +130,7 @@ export default function Presentation() {
                             </motion.li>
                         </ul>
                     </motion.div>
-                    <motion.div className='presentation__content-wrapper' style={{ x: xList[4]}}>
+                    <motion.div className='presentation__content-wrapper'>
                         <motion.p 
                             className='presentation__content-subtitle'
                             initial={{ opacity: 0, y: 50 }}
@@ -120,7 +138,14 @@ export default function Presentation() {
                             transition={{ duration: 0.5 }} 
                             viewport={{ once: true }}
                         >
-                            CV:
+                            
+                            <MaskReveal 
+                                text={"CV:"}
+                                backgroundColor={"#121212"}
+                                animated={false}
+                                inView={true}
+                                delay={0}
+                            />
                         </motion.p>
                         <ul className='presentation__list'>
                             <motion.li 
@@ -134,7 +159,7 @@ export default function Presentation() {
                             </motion.li>
                         </ul>
                     </motion.div>
-                    <List title={'Contact:'} items={contact} x={xList[5]}/>
+                    <List delay={0} animated={false} inView={true} title={'Contact:'} items={contact}/>
                 </div>
             </div>
         </section>

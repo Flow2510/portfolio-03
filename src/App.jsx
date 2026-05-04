@@ -32,29 +32,33 @@ function App() {
             <Loader />
           }
         </AnimatePresence>
-        <Header />
-        <ScrollToTop />
-        <Routes>
-          <Route 
-            path='/' 
-            element={<Home projects={projects} setSelectedCategories={setSelectedCategories}/>} 
-          />
-          <Route 
-            path='/projects' 
-            element={
-              <Projects 
-                projects={projects} 
-                selectedCategories={selectedCategories} 
-                setSelectedCategories={setSelectedCategories}
+        {!loading &&
+          <>
+            <Header />
+            <ScrollToTop />
+            <Routes>
+              <Route 
+                path='/' 
+                element={<Home projects={projects} setSelectedCategories={setSelectedCategories}/>} 
               />
-            } 
-          />
-          <Route path='/about' element={<About />} />
-          <Route path='/:id' element={<ProjectPage 
-            projects={projects}
-          />} />
-        </Routes>
-        <Footer />
+              <Route 
+                path='/projects' 
+                element={
+                  <Projects 
+                    projects={projects} 
+                    selectedCategories={selectedCategories} 
+                    setSelectedCategories={setSelectedCategories}
+                  />
+                } 
+              />
+              <Route path='/about' element={<About />} />
+              <Route path='/:id' element={<ProjectPage 
+                projects={projects}
+              />} />
+            </Routes>
+            <Footer />
+          </>
+        }
       </>
   )
 }

@@ -4,8 +4,8 @@ import { useRef, useState } from 'react'
 
 import Carousel from '../carousel/carousel'
 import AnimatedText from '../animatedtext/animatedtext'
-import FadeInText from '../fadeintext/fadeintext'
 import { NavLink } from 'react-router-dom'
+import MaskReveal from '../maskreveal/maskreveal'
 
 export default function Gallery({ sectionRef, projects }) {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
@@ -18,32 +18,45 @@ export default function Gallery({ sectionRef, projects }) {
     })
 
     const xList = [
-  useTransform(progressA, [0, 0.7], ["0vw", "-60vw"]),
-  useTransform(progressA, [0, 0.7], ["0vw", "-50vw"]),
-  useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
-  useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
-  useTransform(progressA, [0, 0.7], ["0vw", "-40vw"]),
-  useTransform(progressA, [0, 0.7], ["0vw", "50vw"]),
-]
+        useTransform(progressA, [0, 0.7], ["0vw", "-60vw"]),
+        useTransform(progressA, [0, 0.7], ["0vw", "-50vw"]),
+        useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
+        useTransform(progressA, [0, 0.7], ["0vw", "60vw"]),
+        useTransform(progressA, [0, 0.7], ["0vw", "-40vw"]),
+        useTransform(progressA, [0, 0.7], ["0vw", "50vw"]),
+    ]
 
-const yList = [
-  useTransform(progressA, [0, 0.7], ["0vh", "-50vh"]),
-  useTransform(progressA, [0, 0.7], ["0vh", "40vh"]),
-  useTransform(progressA, [0, 0.7], ["0vh", "-16vh"]),
-  useTransform(progressA, [0, 0.7], ["0vh", "-36vh"]),
-  useTransform(progressA, [0, 0.7], ["0vh", "20vh"]),
-  useTransform(progressA, [0, 0.7], ["0vh", "60vh"]),
-]
+    const yList = [
+        useTransform(progressA, [0, 0.7], ["0vh", "-50vh"]),
+        useTransform(progressA, [0, 0.7], ["0vh", "40vh"]),
+        useTransform(progressA, [0, 0.7], ["0vh", "-16vh"]),
+        useTransform(progressA, [0, 0.7], ["0vh", "-36vh"]),
+        useTransform(progressA, [0, 0.7], ["0vh", "20vh"]),
+        useTransform(progressA, [0, 0.7], ["0vh", "60vh"]),
+    ]
 
-    const scale = useTransform(progressA, [0, 0.5], [1, 2]);
+    const scale = useTransform(progressA, [0, 0.5], [1, 1.7]);
+    const carouselY = useTransform(progressA, [0, 0.5], ["0%", "-15%"]);
+    const color = useTransform(progressA, [0.5, 0.7], ["#131313", "#fafafa"]);
 
     return(
         <section className='gallery' ref={sectionRef}>
             <div className='gallery__wrapper'>
                 <div className='gallery__intro'>
                     <h2>
-                        <FadeInText 
-                            text={("Projets & réalisations")}
+                        <MaskReveal
+                            text={"Projets"}
+                            backgroundColor={"#131313"}
+                            animated={false}
+                            inView={true}
+                            delay={0}
+                        />
+                        <MaskReveal
+                            text={"& réalisations"}
+                            backgroundColor={"#131313"}
+                            animated={false}
+                            inView={true}
+                            delay={0}
                         />
                     </h2>
                     <p>
@@ -55,7 +68,7 @@ const yList = [
                     </p>
                 </div>
                 {isDesktop ? 
-                    <div className='gallery__sticky' ref={ref} id='gallery'>
+                    <motion.div className='gallery__sticky' ref={ref} id='gallery' style={{background: color}}>
                         <div className='gallery__content'>
                             <div className='gallery__content-wrapper'>
                                 {projects.slice(0, 6).map((p, index) => (
@@ -75,7 +88,7 @@ const yList = [
                                 ))}
                                 <motion.div
                                     className={`gallery__content-carousel`} 
-                                    style={{ scale }}
+                                    style={{ scale, y: carouselY }}
                                 >
                                     <Carousel
                                         projects={projects}
@@ -83,7 +96,7 @@ const yList = [
                                 </motion.div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                     :
                     <div className='gallery__mobile'>
                         <div className='gallery__mobile-wrapper'>

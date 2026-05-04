@@ -29,6 +29,18 @@ export default function Carousel({ projects }){
         startTimer();
     }, [])
 
+    const animationRight = {
+        initial: { x: "100%" },
+        animate: { x: "0%" },
+        exit: { x: "-100%" }
+    }
+
+    const animationLeft = {
+        initial: { x: "-100%" },
+        animate: { x: "0%" },
+        exit: { x: "100%" }
+    }
+
     return(
         <div className='carousel'>
             <div className='carousel__control'>
@@ -47,34 +59,29 @@ export default function Carousel({ projects }){
                     <i className="fa-solid fa-chevron-right"></i>
                 </button>
             </div>            
-            <AnimatePresence mode='wait'>
-                <NavLink to={`/${projects[carouselIndex].id}`}>
-                    <motion.img 
-                        key={projects[carouselIndex].id}
-                        className='carousel__image' src={projects[carouselIndex].image} 
-                        alt={projects[carouselIndex].alt} 
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={projects[carouselIndex].id}
+                    {...animationRight}
+                    transition={{ duration: 0.3 }}
+                >
+                    <NavLink to={`/${projects[carouselIndex].id}`}>
+                        <img
+                            className="carousel__image"
+                            src={projects[carouselIndex].image}
+                            alt={projects[carouselIndex].alt}
+                            loading="lazy"
+                        />
+                    </NavLink>
+                    <motion.span 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
-                        viewport={{ once: true }}
-                        exit={{ opacity: 0 }}
-                        loading='lazy'
-                    />
-                </NavLink>
-            </AnimatePresence>
-
-            <AnimatePresence mode='wait'>
-                <motion.span 
-                    key={projects[carouselIndex].name}
-                    initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1}}
-                    transition={{ duration: 0.3 }}
-                    exit={{ x: 100, opacity: 0}}
-                    viewport={{ once: true }}
-                    className='carousel__title'
-                >
-                    <span className='carousel__title--font'>#0{carouselIndex + 1}</span> - {projects[carouselIndex].name}
-                </motion.span>
+                        className='carousel__title'
+                    >
+                        <span className='carousel__title--font'>#0{carouselIndex + 1}</span> - {projects[carouselIndex].name}
+                    </motion.span>
+                </motion.div>
             </AnimatePresence>
         </div>
     )

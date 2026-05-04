@@ -1,15 +1,28 @@
 import { NavLink } from 'react-router-dom';
 import './cta.scss';
-import FadeInText from '../fadeintext/fadeintext';
 import { motion } from 'motion/react';
 import AnimatedText from '../animatedtext/animatedtext';
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function Cta({ to }) {
     return(
         <section className='cta'>
             <div className='cta__content'>
                 <h3 className='cta__content-title'>
-                    <FadeInText text={'Découvrez mon parcours'}/>
+                    <MaskReveal
+                        text={"Découvrez"}
+                        backgroundColor={"#fafafa"}
+                        animated={false}
+                        inView={true}
+                        delay={0}
+                    />
+                    <MaskReveal
+                        text={"mon parcours"}
+                        backgroundColor={"#fafafa"}
+                        animated={false}
+                        inView={true}
+                        delay={0}
+                    />
                 </h3>
                 <div className='cta__content-wrapper'>                 
                     <motion.p 

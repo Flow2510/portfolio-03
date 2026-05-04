@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import './projectfeatures.scss';
 import { useRef } from 'react';
+import MaskReveal from '../maskreveal/maskreveal';
 
 export default function ProjectFeatures({ project, sectionRef }){
     const ref = useRef(null)
@@ -10,62 +11,98 @@ export default function ProjectFeatures({ project, sectionRef }){
         offset: ["start end", "end start"]
     })
 
-    const xList = [
-        useTransform(scrollYProgress, [0, 0.15, 0.35, 1], ["100vw", "100vw", "0vw", "0vw"]),
-        useTransform(scrollYProgress, [0.05, 0.2, 0.4, 1], ["100vw", "100vw", "0vw", "0vw"]),
-        useTransform(scrollYProgress, [0.1, 0.25, 0.45, 1], ["100vw", "100vw", "0vw", "0vw"]),
-        useTransform(scrollYProgress, [0.15, 0.3, 0.5, 1], ["100vw", "100vw", "0vw", "0vw"]),
-        useTransform(scrollYProgress, [0.2, 0.35, 0.55, 1], ["100vw", "100vw", "0vw", "0vw"]),
-        useTransform(scrollYProgress, [0.25, 0.4, 0.6, 1], ["100vw", "100vw", "0vw", "0vw"])
-    ];
-
     return(
         <section className='project-features' ref={sectionRef}>
             <div className='project-features__wrapper' ref={ref}>
                 <motion.p
                     className='project-features__item'
-                    style={{ x: xList[0] }}
-                >
-                    <span className='project-features--bold'>Project:</span> {project.name}
+                >                    
+                    <span className='project-features--bold'>
+                        <MaskReveal 
+                            text={"Project:"}
+                            backgroundColor={"#121212"}
+                            animated={false}
+                            delay={0}
+                            inView={true}
+                        />
+                    </span> 
+                    <span>{project.name}</span>
                 </motion.p>
                 <motion.p
                     className='project-features__item'
-                    style={{ x: xList[1] }}
+
                 >
-                    <span className='project-features--bold'>Année:</span> {project.year}
+                    <span className='project-features--bold'>                        
+                        <MaskReveal 
+                            text={"Année:"}
+                            backgroundColor={"#121212"}
+                            animated={false}
+                            delay={0}
+                            inView={true}
+                        />
+                    </span> 
+                    <span>{project.year}</span>                    
                 </motion.p>
                 {project.link &&
                     <motion.p
-                        className='project-features__item'
-                        style={{ x: xList[2] }}
+                        className='project-features__item'    
                     >
-                        <span className='project-features--bold'>Lien: </span> 
+                        <span className='project-features--bold'>
+                            <MaskReveal 
+                                text={"Lien:"}
+                                backgroundColor={"#121212"}
+                                animated={false}
+                                delay={0}
+                                inView={true}
+                            />
+                        </span> 
                         <a target='_blank' href={project.link}>{project.link} <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </motion.p>
                 }
                 {project.git &&
                     <motion.p
-                        className='project-features__item'
-                        style={{ x: xList[3] }} 
+                        className='project-features__item'     
                     >
-                        <span className='project-features--bold'>Github: </span> 
+                        <span className='project-features--bold'>
+                            <MaskReveal 
+                                text={"Github:"}
+                                backgroundColor={"#121212"}
+                                animated={false}
+                                delay={0}
+                                inView={true}
+                            />
+                        </span> 
                             <a target='_blank' href={project.git}>{project.git} <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </motion.p>
                 }
                 <motion.p
                     className='project-features__item'
-                    style={{ x: xList[4] }}
                 >
-                    <span className='project-features--bold'>Technologies: </span>
+                    <span className='project-features--bold'>
+                        <MaskReveal 
+                            text={"Technologies"}
+                            backgroundColor={"#121212"}
+                            animated={false}
+                            delay={0}
+                            inView={true}
+                        />
+                    </span>
                     {project.stack.map((s, index) => (
                         <span key={s + index}>"{s}" </span>
                     ))}
                 </motion.p>
                 <motion.p
                     className='project-features__item'
-                    style={{ x: xList[5] }}
                 >
-                    <span className='project-features--bold'>Librairies: </span>
+                    <span className='project-features--bold'>
+                        <MaskReveal 
+                            text={"Librairies:"}
+                            backgroundColor={"#121212"}
+                            animated={false}
+                            delay={0}
+                            inView={true}
+                        />
+                    </span>
                     {project.library.map((s, index) => (
                         <span key={s + index}>"{s}" </span>
                     ))}
