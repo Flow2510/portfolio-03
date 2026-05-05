@@ -1,12 +1,14 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import './presentation.scss';
 import List from '../list/list';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import photo from '../../assets/images/silhouette.webp'
 import MaskReveal from '../maskreveal/maskreveal';
 
 export default function Presentation() {
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768)
+
     const stud = [
         "'Integrateur Web' OpenClassRooms [2026]", 
         "'HTML, CSS, JS' W3School [2025]", 
@@ -34,19 +36,6 @@ export default function Presentation() {
     ];
 
     const sectionRef = useRef(null);
-    const {scrollYProgress} = useScroll({
-        target: sectionRef,
-        offset: ["start 30%", "end start"]
-    })
-
-    const xList = [
-        useTransform(scrollYProgress, [0, 0.15, 0.35, 1], ["120%", "120%", "0%", "0%"]),
-        useTransform(scrollYProgress, [0.05, 0.2, 0.4, 1], ["120%", "120%", "0%", "0%"]),
-        useTransform(scrollYProgress, [0.1, 0.25, 0.45, 1], ["120%", "120%", "0%", "0%"]),
-        useTransform(scrollYProgress, [0.15, 0.3, 0.5, 1], ["120%", "120%", "0%", "0%"]),
-        useTransform(scrollYProgress, [0.2, 0.35, 0.55, 1], ["120%", "120%", "0%", "0%"]),
-        useTransform(scrollYProgress, [0.25, 0.4, 0.6, 1], ["120%", "120%", "0%", "0%"])
-    ];
 
     return(
         <section className='presentation'>
@@ -89,9 +78,9 @@ export default function Presentation() {
                             Je continue à perfectionner mes compétences et à tester de nouvelles idées pour améliorer mes projets. Chaque site que je crée est pour moi une occasion d’allier esthétique et performance.
                         </motion.p>
                     </div>
-                    <List delay={0.1} animated={true} inView={false} title={'Parcours:'} items={stud}/>
-                    <List delay={0.2} animated={true} inView={false} title={'Stack:'} items={comp} />
-                    <List delay={0.3} animated={true} inView={false} title={'Focus actuel:'} items={learn}/>
+                    <List delay={0.1} animated={isDesktop} inView={!isDesktop} title={'Parcours:'} items={stud}/>
+                    <List delay={0.2} animated={isDesktop} inView={!isDesktop} title={'Stack:'} items={comp} />
+                    <List delay={0.3} animated={isDesktop} inView={!isDesktop} title={'Focus actuel:'} items={learn}/>
                     <motion.div className='presentation__content-wrapper' >
                         <motion.p 
                             className='presentation__content-subtitle'

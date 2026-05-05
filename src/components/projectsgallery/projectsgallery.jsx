@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function ProjectsGallery() {
 
-
     return(
         <section 
             className='projects-gallery'

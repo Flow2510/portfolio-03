@@ -1,19 +1,12 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import './projectfeatures.scss';
-import { useRef } from 'react';
 import MaskReveal from '../maskreveal/maskreveal';
 
 export default function ProjectFeatures({ project, sectionRef }){
-    const ref = useRef(null)
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    })
 
     return(
         <section className='project-features' ref={sectionRef}>
-            <div className='project-features__wrapper' ref={ref}>
+            <div className='project-features__wrapper'>
                 <motion.p
                     className='project-features__item'
                 >                    

@@ -14,6 +14,7 @@ import animation from "../../assets/images/animation.png"
 import animationAnimed from "../../assets/images/animation.gif"
 import perf from "../../assets/images/perf.png"
 import perfAnimed from "../../assets/images/perf.gif"
+import MaskReveal from '../maskreveal/maskreveal';
 
 
 export default function FeatureSection() {
@@ -79,8 +80,19 @@ export default function FeatureSection() {
             <div style={{ maxWidth: 1200 }}>
                 <div className='feature-section__content'>
                     <h2 className='feature-section__content-title'>
-                        <FadeInText 
-                            text={"Technologies & pratiques"}
+                        <MaskReveal
+                            text={"Technologies"}
+                            backgroundColor={"#151515"}
+                            inView={true}
+                            animated={false}
+                            delay={0}
+                        />
+                        <MaskReveal
+                            text={"& pratiques"}
+                            backgroundColor={"#151515"}
+                            inView={true}
+                            animated={false}
+                            delay={0}
                         />
                     </h2>
                 </div>

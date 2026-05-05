@@ -64,6 +64,7 @@ export default function Carousel({ projects }){
                     key={projects[carouselIndex].id}
                     {...animationRight}
                     transition={{ duration: 0.3 }}
+                    style={{ height: "100%"}}
                 >
                     <NavLink to={`/${projects[carouselIndex].id}`}>
                         <img
