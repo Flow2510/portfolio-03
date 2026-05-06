@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.scss'
 import Home from './pages/home'
 import Projects from './pages/projects'
@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react'
 import ProjectPage from './pages/projectpage'
 import ScrollToTop from './components/scrolltotop/scrolltotop'
 import Loader from './components/loader/loader'
-import { AnimatePresence } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -20,10 +20,12 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3600);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const location = useLocation();
 
   return (
       <>
@@ -36,26 +38,36 @@ function App() {
           <>
             <Header />
             <ScrollToTop />
-            <Routes>
-              <Route 
-                path='/' 
-                element={<Home projects={projects} setSelectedCategories={setSelectedCategories}/>} 
-              />
-              <Route 
-                path='/projects' 
-                element={
-                  <Projects 
-                    projects={projects} 
-                    selectedCategories={selectedCategories} 
-                    setSelectedCategories={setSelectedCategories}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={location.pathname}
+                initial={{x: "100%", opacity: 0}}
+                animate={{x: "0%", opacity: 1}}
+                exit={{  opacity: 0}}
+                transition={{ duration: 0.3, type: "tween"}}
+              >
+                <Routes location={location}>
+                  <Route 
+                    path='/' 
+                    element={<Home projects={projects} setSelectedCategories={setSelectedCategories}/>} 
                   />
-                } 
-              />
-              <Route path='/about' element={<About />} />
-              <Route path='/:id' element={<ProjectPage 
-                projects={projects}
-              />} />
-            </Routes>
+                  <Route 
+                    path='/projects' 
+                    element={
+                      <Projects 
+                        projects={projects} 
+                        selectedCategories={selectedCategories} 
+                        setSelectedCategories={setSelectedCategories}
+                      />
+                    } 
+                  />
+                  <Route path='/about' element={<About />} />
+                  <Route path='/:id' element={<ProjectPage 
+                    projects={projects}
+                  />} />
+                </Routes>
+              </motion.div>
+            </AnimatePresence>
             <Footer />
           </>
         }

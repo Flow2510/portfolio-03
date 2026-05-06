@@ -39,6 +39,7 @@
         object-fit: cover;
         object-position: 50% 40%;
         display: block;
+        filter: grayscale(100%);
     }
 
     &__wrapper{

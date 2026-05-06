@@ -1,8 +1,36 @@
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import './loader.scss';
-import LoaderAnimation from '../loaderanimation/loaderanimation';
+import { useEffect, useState } from 'react';
 
 export default function Loader() {
+    const [loadingNumber, setLoadingNumber] = useState(0);
+
+    useEffect(() => {
+        const firstRandomNumber =
+            Math.floor(Math.random() * (40 - 15 + 1)) + 15;
+
+        const secondRandomNumber =
+            Math.floor(Math.random() * (85 - 60 + 1)) + 60;
+
+        const timer1 = setTimeout(() => {
+            setLoadingNumber(firstRandomNumber);
+        }, 1000);
+
+        const timer2 = setTimeout(() => {
+            setLoadingNumber(secondRandomNumber);
+        }, 2000);
+
+        const timer3 = setTimeout(() => {
+            setLoadingNumber(100);
+        }, 3000);
+
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            clearTimeout(timer3);
+        };
+    }, []);
+
     return(
         <section className='loader'>
             <motion.h2 
@@ -46,10 +74,28 @@ export default function Loader() {
             <motion.div 
                 initial={{ x: 0 }}
                 exit={{ x: "100%" }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.4 }}
                 className='loader__content'
             >
-                <LoaderAnimation />
+                <p className='loader__count'>
+                    <div style={{ overflow: "hidden"}}>
+                        <AnimatePresence mode='wait'>
+                            <motion.span 
+                                initial={{ y: "100%" }} 
+                                animate={{ y: "0%"}} 
+                                exit={{ y: "-100%"}} 
+                                transition={{ duration: 0.3 }}
+                                key={loadingNumber} 
+                                className='loader__count-number'
+                            >
+                                {loadingNumber}
+                            </motion.span>
+                        </AnimatePresence>
+                    </div>
+                    <span className='loader__count-text'>
+                        %
+                    </span>
+                </p>
             </motion.div>
             <motion.div 
                 initial={{ x: 0 }}
