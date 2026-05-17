@@ -7,13 +7,12 @@ Le site suit une approche minimaliste et moderne, avec une navigation simple et 
 🚧 Projet en cours de développement:
 
 Les textes définitifs ne sont pas encore intégrés
-La sélection de projets n'a pas encore été ajoutée
 Les images et mock-ups seront ajoutés au fur et à mesure du développement
 Les polices définitives n’ont pas encore été choisies
 Le logo n’est pas encore créé
 Certaines parties du design peuvent encore évoluer
 Les animations ne sont pas définitives
-Amélioration des performances
+Amélioration des performances à venir
 
 
 ⚙️ Stack utilisée:

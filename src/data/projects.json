@@ -14,6 +14,20 @@
     "text": "Portfolio conçu avec React pour présenter mes projets. J’ai mis l’accent sur la fluidité des animations, la structure des composants et une navigation claire. Le site est entièrement responsive et optimisé pour une expérience utilisateur rapide et cohérente."
   },
   {
+    "name": "Lorem Agency",
+    "id": "lorem-agency",
+    "year": "2026",
+    "link": "https://sendraflorian.netlify.app/",
+    "git": "https://github.com/Flow2510/Lorem-Agency",
+    "tags": ["UI moderne", "Animations", "Responsive"],
+    "stack": ["REACT", "SCSS"],
+    "library": ["Vite", "React-Router", "Framer Motion"],
+    "image": "/images/lorem-agency-mockup.webp",
+    "alt": "Mockup d’un site de création digitale affiché sur un écran mobile",
+    "intro": "Site d’agence créative conçu avec React et des animations immersives.",
+    "text": "Concept de site pour une agence digitale moderne pensé pour présenter les services, les projets et l’identité visuelle de la marque à travers un univers premium et immersif. L’accent a été mis sur la fluidité des animations, l’élégance des mises en page et les interactions dynamiques afin de créer une expérience utilisateur forte. Le site est entièrement responsive et optimisé pour une navigation fluide sur tous les supports."
+  },
+  {
     "name": "Porvenir",
     "id": "porvenir",
     "year": "2026",
