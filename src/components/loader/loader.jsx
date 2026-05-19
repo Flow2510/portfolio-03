@@ -78,7 +78,7 @@ export default function Loader() {
                 className='loader__content'
             >
                 <p className='loader__count'>
-                    <div style={{ overflow: "hidden"}}>
+                    <span style={{ overflow: "hidden"}}>
                         <AnimatePresence mode='wait'>
                             <motion.span 
                                 initial={{ y: "100%" }} 
@@ -91,7 +91,7 @@ export default function Loader() {
                                 {loadingNumber}
                             </motion.span>
                         </AnimatePresence>
-                    </div>
+                    </span>
                     <span className='loader__count-text'>
                         %
                     </span>

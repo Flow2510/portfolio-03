@@ -10,6 +10,10 @@
     "library": ["Vite", "React-Router", "Framer Motion"],
     "image": "/images/portfolio3-mobile-mockup.webp",
     "alt": "Mockup du portfolio personnel version 3 affiché sur un écran mobile",
+    "image2": "/public/images/portfolio3-mockup2.webp",
+    "alt2": "Mockup du portfolio personnel version 3 affiché sur un écran mobile",
+    "image3": "/public/images/portfolio3-mockup3.webp",
+    "alt3": "Mockup du portfolio personnel version 3 affiché sur un écran mobile",
     "intro": "Portfolio React avec animations et navigation fluide.",
     "text": "Portfolio conçu avec React pour présenter mes projets. J’ai mis l’accent sur la fluidité des animations, la structure des composants et une navigation claire. Le site est entièrement responsive et optimisé pour une expérience utilisateur rapide et cohérente."
   },
@@ -24,6 +28,10 @@
     "library": ["Vite", "React-Router", "Framer Motion"],
     "image": "/images/lorem-agency-mockup.webp",
     "alt": "Mockup d’un site de création digitale affiché sur un écran mobile",
+    "image2": "/images/lorem-agency-mockup2.webp",
+    "alt2": "Mockup d’un site de création digitale affiché sur un écran mobile",
+    "image3": "/images/lorem-agency-mockup3.webp",
+    "alt3": "Mockup d’un site de création digitale affiché sur un écran mobile",
     "intro": "Site d’agence créative conçu avec React et des animations immersives.",
     "text": "Concept de site pour une agence digitale moderne pensé pour présenter les services, les projets et l’identité visuelle de la marque à travers un univers premium et immersif. L’accent a été mis sur la fluidité des animations, l’élégance des mises en page et les interactions dynamiques afin de créer une expérience utilisateur forte. Le site est entièrement responsive et optimisé pour une navigation fluide sur tous les supports."
   },
@@ -38,6 +46,10 @@
     "library": ["Vite", "React-Router", "i18n", "Framer Motion"],
     "image": "/images/porvenir-mockup.webp",
     "alt": "Mockup du site Porvenir affiché sur mobile",
+    "image2": "/images/porvenir-mockup.webp",
+    "alt2": "Mockup du site Porvenir affiché sur mobile",
+    "image3": "/images/porvenir-mockup.webp",
+    "alt3": "Mockup du site Porvenir affiché sur mobile",
     "intro": "Site vitrine responsive pour une auberge.",
     "text": "Site vitrine développé avec React pour présenter une auberge. Travail sur la clarté du contenu, le responsive design et l’optimisation SEO. L’interface est pensée pour être simple, lisible et efficace sur tous les supports."
   },
@@ -52,6 +64,10 @@
     "library": ["Vite", "React-Router", "Framer Motion"],
     "image": "/images/portfolio02-mockup.webp",
     "alt": "Mockup du portfolio version 2 affiché sur tablette",
+    "image2": "/images/portfolio02-mockup.webp",
+    "alt2": "Mockup du portfolio version 2 affiché sur tablette",
+    "image3": "/images/portfolio02-mockup.webp",
+    "alt3": "Mockup du portfolio version 2 affiché sur tablette",
     "intro": "Portfolio avec animations et interface moderne.",
     "text": "Deuxième version de mon portfolio avec React. J’ai amélioré la structure du code et ajouté des animations pour rendre l’interface plus dynamique. Le projet m’a permis de consolider mes bases en composants et responsive design."
   },
@@ -66,6 +82,10 @@
     "library": ["Vite", "Framer Motion", "GSAP"],
     "image": "/images/spylt-mockup.webp",
     "alt": "Mockup du clone Spylt affiché sur laptop",
+    "image2": "/images/spylt-mockup.webp",
+    "alt2": "Mockup du clone Spylt affiché sur laptop",
+    "image3": "/images/spylt-mockup.webp",
+    "alt3": "Mockup du clone Spylt affiché sur laptop",
     "intro": "Clone du site Spylt avec animations avancées.",
     "text": "Reproduction du site Spylt pour travailler les animations et le respect du design original. J’ai utilisé React et GSAP pour reproduire les interactions tout en gardant une structure propre et responsive."
   },
@@ -80,6 +100,10 @@
     "library": ["Vite", "React-Router", "REST API"],
     "image": "/images/restcountries-mockup.webp",
     "alt": "Mockup de l'application REST Countries sur mobile",
+    "image2": "/images/restcountries-mockup.webp",
+    "alt2": "Mockup de l'application REST Countries sur mobile",
+    "image3": "/images/restcountries-mockup.webp",
+    "alt3": "Mockup de l'application REST Countries sur mobile",
     "intro": "App React avec API pour explorer les pays.",
     "text": "Application React connectée à une API REST pour afficher et filtrer des pays. Mise en place d’une recherche dynamique, de filtres par région et d’une navigation fluide. Travail sur la gestion des données et l’UX."
   },
@@ -94,6 +118,10 @@
     "library": ["Vite", "React-Router"],
     "image": "/images/portfolio-mockup.webp",
     "alt": "Mockup du premier portfolio affiché sur laptop",
+    "image2": "/images/portfolio-mockup.webp",
+    "alt2": "Mockup du premier portfolio affiché sur laptop",
+    "image3": "/images/portfolio-mockup.webp",
+    "alt3": "Mockup du premier portfolio affiché sur laptop",
     "intro": "Premier portfolio en React.",
     "text": "Premier projet complet avec React. J’y ai appris à structurer une application front-end, gérer le responsive design et intégrer des animations simples."
   },
@@ -108,6 +136,10 @@
     "library": ["Vite", "REST API"],
     "image": "/images/weather-mockup.webp",
     "alt": "Mockup de l'application météo sur tablette",
+    "image2": "/images/weather-mockup.webp",
+    "alt2": "Mockup de l'application météo sur tablette",
+    "image3": "/images/weather-mockup.webp",
+    "alt3": "Mockup de l'application météo sur tablette",
     "intro": "Application météo avec API.",
     "text": "Application permettant de consulter la météo d’une ville via une API. Travail sur l’affichage des données, la réactivité de l’interface et la lisibilité sur tous les écrans."
   }

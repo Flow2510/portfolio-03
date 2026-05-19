@@ -19,8 +19,8 @@ export default function ProjectPage({projects}) {
             />
             <ProjectFeatures project={project}/>
             <DualWrapper 
-                photo1={project.image}
-                photo2={project.image}
+                photo1={project.image2}
+                photo2={project.image3}
             />
             <ReturnSection 
                 to={"/projects"}
