@@ -1,6 +1,5 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import './maskreveal.scss';
-import { useRef } from 'react';
 
 export default function MaskReveal({text, backgroundColor, delay}) {
     return(

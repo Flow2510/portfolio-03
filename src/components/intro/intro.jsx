@@ -28,15 +28,6 @@ export default function Intro({ project, sectionRef }) {
                             inView={false}
                         />
                     </NavLink>
-                    <h2 className={'intro__content-title'}>
-                        <MaskReveal
-                            text={project.name}
-                            backgroundColor={"#121212"}
-                            animated={true}
-                            delay={0}
-                            inView={false}
-                        />
-                    </h2>
                 </motion.div>
                 
                 <div

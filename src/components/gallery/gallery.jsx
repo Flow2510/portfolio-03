@@ -36,7 +36,6 @@ export default function Gallery({ sectionRef, projects }) {
     ]
 
     const scale = useTransform(progressA, [0, 0.5], [1, 1.7]);
-    const carouselY = useTransform(progressA, [0, 0.5], ["0%", "-15%"]);
     const color = useTransform(progressA, [0.5, 0.7], ["#131313", "#fafafa"]);
 
     return(
@@ -88,7 +87,7 @@ export default function Gallery({ sectionRef, projects }) {
                                 ))}
                                 <motion.div
                                     className={`gallery__content-carousel`} 
-                                    style={{ scale, y: carouselY }}
+                                    style={{ scale }}
                                 >
                                     <Carousel
                                         projects={projects}

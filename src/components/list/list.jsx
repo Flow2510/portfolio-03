@@ -1,7 +1,6 @@
 import { motion } from 'motion/react'
 import './list.scss'
 import MaskReveal from '../maskreveal/maskreveal'
-import { animate } from 'motion'
 
 export default function List({title, items, x, animated, inView, delay}) {
     return(

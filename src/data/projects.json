@@ -8,6 +8,10 @@
     "tags": ["UI moderne", "Animations", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router", "Framer Motion"],
+    "score": {
+      "desktop": { "perf": 99, "accessibility": 100, "bestPractices": 100, "seo": 100 },
+      "mobile": { "perf": 92, "accessibility": 100, "bestPractices": 100, "seo": 100 }
+    },
     "image": "/images/portfolio3-mobile-mockup.webp",
     "alt": "Mockup du portfolio personnel version 3 affiché sur un écran mobile",
     "image2": "/images/portfolio3-mockup2.webp",
@@ -26,6 +30,10 @@
     "tags": ["UI moderne", "Animations", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router", "Framer Motion"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/lorem-agency-mockup.webp",
     "alt": "Mockup d’un site de création digitale affiché sur un écran mobile",
     "image2": "/images/lorem-agency-mockup2.webp",
@@ -44,6 +52,10 @@
     "tags": ["Site vitrine", "Responsive", "SEO"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router", "i18n", "Framer Motion"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/porvenir-mockup.webp",
     "alt": "Mockup du site Porvenir affiché sur mobile",
     "image2": "/images/porvenir-mockup.webp",
@@ -62,6 +74,10 @@
     "tags": ["UI", "Animations", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router", "Framer Motion"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/portfolio02-mockup.webp",
     "alt": "Mockup du portfolio version 2 affiché sur tablette",
     "image2": "/images/portfolio02-mockup.webp",
@@ -80,6 +96,10 @@
     "tags": ["Clone UI", "Animations", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "Framer Motion", "GSAP"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/spylt-mockup.webp",
     "alt": "Mockup du clone Spylt affiché sur laptop",
     "image2": "/images/spylt-mockup.webp",
@@ -98,6 +118,10 @@
     "tags": ["API", "Recherche dynamique", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router", "REST API"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/restcountries-mockup.webp",
     "alt": "Mockup de l'application REST Countries sur mobile",
     "image2": "/images/restcountries-mockup.webp",
@@ -116,6 +140,10 @@
     "tags": ["Portfolio", "Responsive", "Animations"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "React-Router"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/portfolio-mockup.webp",
     "alt": "Mockup du premier portfolio affiché sur laptop",
     "image2": "/images/portfolio-mockup.webp",
@@ -134,6 +162,10 @@
     "tags": ["API", "React", "Responsive"],
     "stack": ["REACT", "SCSS"],
     "library": ["Vite", "REST API"],
+    "score": {
+      "desktop": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null },
+      "mobile": { "perf": null, "accessibility": null, "bestPractices": null, "seo": null }
+    },
     "image": "/images/weather-mockup.webp",
     "alt": "Mockup de l'application météo sur tablette",
     "image2": "/images/weather-mockup.webp",
