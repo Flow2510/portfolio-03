@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { NavLink } from 'react-router-dom';
 
 export default function Carousel({ projects }){
 
@@ -26,11 +27,16 @@ export default function Carousel({ projects }){
                     className='carousel__item'
                     key={project.id + index}
                 >
-                    <img 
-                        className='carousel__item-image'
-                        src={project.image} 
-                        alt={project.alt} 
-                    />
+                    <NavLink
+                        to={`/${project.id}`}
+                    >
+                        <img 
+                            className='carousel__item-image'
+                            loading='lazy'
+                            src={project.image} 
+                            alt={project.alt} 
+                        />
+                    </NavLink>
                 </SwiperSlide>
             ))}
         </Swiper>

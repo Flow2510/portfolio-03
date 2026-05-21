@@ -7,7 +7,7 @@
     "git": "https://github.com/Flow2510/portfolio-03",
     "tags": ["UI moderne", "Animations", "Responsive"],
     "stack": ["REACT", "SCSS"],
-    "library": ["Vite", "React-Router", "Framer Motion"],
+    "library": ["Vite", "React-Router", "Framer Motion", "Swiper"],
     "score": {
       "desktop": { "perf": 99, "accessibility": 100, "bestPractices": 100, "seo": 100 },
       "mobile": { "perf": 92, "accessibility": 100, "bestPractices": 100, "seo": 100 }

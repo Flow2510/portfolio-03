@@ -32,3 +32,20 @@
 .swiper-pagination-bullet-active {
   background: #ffffff !important;
 }
+
+.embla{
+
+  &__viewport{
+    overflow: hidden;
+  }
+
+  &__container{
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+}
